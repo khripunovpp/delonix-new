@@ -6,3 +6,68 @@
 	.mobile
 		display: none
 
+	.container
+		max-width: 1140px
+
+	.header
+		display: block
+		&__inner,
+		&__services
+			padding-left: 190px
+		&__top
+			padding: 10px 0
+			line-height: 1
+			display: flex
+		&__services
+			background-color: $color
+		&__inner
+			position: relative
+		&__logo
+			position: absolute
+			left: 0
+			top: 10px
+		&__address
+			font-size: 18px
+			font-weight: 100
+		&__email
+			font-weight: 500
+			color: inherit
+			position: relative
+			margin-left: 35px
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -3px
+				left: -21px
+				width: 6px
+				height: 6px
+				background-color: $color
+			&:hover
+				color: $color
+		&__contacts
+			margin-left: auto
+			text-align: right
+		&__phone
+			font-weight: 700
+			font-size: 25px
+			display: block
+			color: inherit
+			text-decoration: none
+			&:hover
+				color: $color
+		&__openpopup
+			font-size: 18px
+			font-weight: 100
+			text-decoration: underline
+			padding: 0
+			border: none
+			background-color: transparent
+			cursor: pointer
+			margin-top: 5px
+			&:hover
+				text-decoration: none
+		&__socials
+			font-size: 28px
+
+

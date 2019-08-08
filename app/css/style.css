@@ -102,6 +102,15 @@ select {
   margin: 0 auto;
 }
 
+.fileType {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid;
+  line-height: 1;
+  padding: 1px 3px;
+}
+
 .mobileHeader {
   background-color: #e30b13;
   color: #fff;
@@ -172,17 +181,18 @@ select {
 .mobileNav__search, .mobileNav__burger {
   padding: 0;
   line-height: 1;
-  font-size: 15px;
   background-color: transparent;
   border: none;
 }
 
 .mobileNav__search::before {
   content: '\e903';
+  font-size: 15px;
 }
 
 .mobileNav__burger::before {
   content: '\e90f';
+  font-size: 17px;
 }
 
 .mobileNav__menu {
@@ -304,15 +314,6 @@ select {
   line-height: 1.2;
 }
 
-.mobileMenu li a.has-bage small {
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 3px;
-  border: 1px solid;
-  line-height: 1;
-  padding: 1px 3px;
-}
-
 .mobileMenu__socials {
   font-size: 25px;
   margin: 70px 0 10px;
@@ -352,6 +353,10 @@ select {
   color: #fff;
 }
 
+.header {
+  display: none;
+}
+
 .socials__item {
   display: inline-block;
   vertical-align: middle;
@@ -367,7 +372,7 @@ select {
 }
 
 .socials__item::before {
-  font-size: 14px;
+  font-size: .7em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -379,8 +384,8 @@ select {
 
 .socials__item--whatsapp::before {
   content: '\e900';
-  margin-left: -7px;
-  margin-top: -7px;
+  margin-left: -.5em;
+  margin-top: -.5em;
 }
 
 .socials__item--viber {
@@ -389,18 +394,19 @@ select {
 
 .socials__item--viber::before {
   content: '\e901';
-  margin-left: -8px;
-  margin-top: -6px;
+  margin-left: -.55em;
+  margin-top: -.45em;
 }
 
 .socials__item--instagram {
   background-color: #C536A4;
+  background-image: url();
 }
 
 .socials__item--instagram::before {
   content: '\e902';
-  margin-left: -7px;
-  margin-top: -7px;
+  margin-left: -.5em;
+  margin-top: -.5em;
 }
 
 .socials__item + .socials__item {
@@ -411,5 +417,86 @@ select {
 @media only screen and (min-width: 992px) {
   .mobile {
     display: none;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  .header {
+    display: block;
+  }
+  .header__inner, .header__services {
+    padding-left: 190px;
+  }
+  .header__top {
+    padding: 10px 0;
+    line-height: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__services {
+    background-color: #e30b13;
+  }
+  .header__inner {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+  .header__address {
+    font-size: 18px;
+    font-weight: 100;
+  }
+  .header__email {
+    font-weight: 500;
+    color: inherit;
+    position: relative;
+    margin-left: 35px;
+  }
+  .header__email::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    left: -21px;
+    width: 6px;
+    height: 6px;
+    background-color: #e30b13;
+  }
+  .header__email:hover {
+    color: #e30b13;
+  }
+  .header__contacts {
+    margin-left: auto;
+    text-align: right;
+  }
+  .header__phone {
+    font-weight: 700;
+    font-size: 25px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  .header__phone:hover {
+    color: #e30b13;
+  }
+  .header__openpopup {
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration: underline;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+  .header__openpopup:hover {
+    text-decoration: none;
+  }
+  .header__socials {
+    font-size: 28px;
   }
 }
