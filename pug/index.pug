@@ -1,0 +1,53 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800,900")
+		link(rel='stylesheet', href='css/style.css')
+		style.
+			*,
+			*::after,
+			*::before {
+				//- outline: 1px solid rgba(255,0,0,.5) !important
+			}
+		script(src="https://ctr-localhost.ru/vlad/jq.js")
+
+	body
+		.w-page
+			.search
+				.search__inner
+					p.search__title Поиск
+					button.search__close
+					.search__field
+						input(type="search")
+			.mobile
+				header.mobileHeader
+					.container
+						.mobileHeader__socials
+							include _socials-short
+						a.mobileHeader__link.mobileHeader__link--phone(href="") +7(499)450-55-74
+						a.mobileHeader__link.mobileHeader__link--email(href="") hello@delonix.su
+				nav.mobileNav
+					button.mobileNav__search
+					.mobileNav__logo
+						img(src="img/logo.png", alt="")
+					button.mobileNav__burger
+					.mobileNav__menu.mobileMenu
+						.mobileMenu__inner
+							p.mobileMenu__title Меню
+							button.mobileMenu__close
+							include _menulist
+							.mobileMenu__socials
+								include _socials
+							a.mobileMenu__address(href="") ул. Смольная, д. 24А, офис 43
+							a.mobileMenu__email(href="") hello@delonix.su
+							a.mobileMenu__phone(href="") +7 (499) 450-55-74
+							button.mobileMenu__openpopup Заказать звонок
+
+
+		script(src="js/common.js")

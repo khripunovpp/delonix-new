@@ -1,0 +1,39 @@
+.socials
+	&__item
+		display: inline-block
+		vertical-align: middle
+		border-radius: 50%
+		width: 1.1em
+		height: 1.1em
+		border-radius: 50%
+		text-decoration: none
+		line-height: 1.1em
+		position: relative
+		text-decoration: none
+		color: #fff
+		&::before
+			@extend %icon
+			font-size: 14px
+			position: absolute
+			top: 50%
+			left: 50%
+		&--whatsapp
+			background-color: #09D261
+			&::before
+				content: '\e900'
+				margin-left: -7px
+				margin-top: -7px
+		&--viber
+			background-color: #665CAC
+			&::before
+				content: '\e901'
+				margin-left: -8px
+				margin-top: -6px
+		&--instagram
+			background-color: #C536A4
+			&::before
+				content: '\e902'
+				margin-left: -7px
+				margin-top: -7px
+		&+&
+			margin-left: .2em

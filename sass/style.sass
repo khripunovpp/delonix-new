@@ -2,9 +2,9 @@
 @import "icon.sass"
 @import "mixins"
 
-$color: #f4c409
+$color: #e30b13
 $font: 'Roboto', sans-serif
-$font2: 'Rubik', sans-serif
+$container: 480px
 
 html
 	box-sizing: border-box
@@ -24,7 +24,7 @@ body
 	font-family: $font
 	line-height: 1.4
 	font-size: 14px
-	background-color: #121211
+	background-color: #fff
 	text-size-adjust: 100%
 	-webkit-tap-highlight-color: transparent
 
@@ -52,11 +52,11 @@ button,
 input,
 textarea,
 select
-	font-family: $font2
+	font-family: $font
 
 %container
 	width: 100%
-	max-width: 970px	
+	max-width: $container	
 	padding: 0 15px
 	margin: 0 auto
 
@@ -72,7 +72,8 @@ select
 .container
 	@extend %container
 
-@import "base"
+@import "header"
+@import "socials"
 
 
 //ALWAYS END
