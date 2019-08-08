@@ -9,19 +9,32 @@
 	.container
 		max-width: 1140px
 
+	.fileType
+		background-color: $color
+		color: #fff
+		border: none
+
 	.header
 		display: block
 		&__inner,
 		&__services
 			padding-left: 190px
+		&__main
+			border-bottom: 2px solid $color
 		&__top
-			padding: 10px 0
-			line-height: 1
 			display: flex
+			margin-bottom: 15px
+		&__bottom
+			display: flex
+			align-items: center
 		&__services
 			background-color: $color
+			display: none
 		&__inner
 			position: relative
+			padding-top: 18px
+			padding-bottom: 9px
+			line-height: 1
 		&__logo
 			position: absolute
 			left: 0
@@ -69,5 +82,53 @@
 				text-decoration: none
 		&__socials
 			font-size: 28px
+			white-space: nowrap
+		&__nav
+			flex-basis: 100%
+			ul
+				display: flex
+				justify-content: space-between
+			li
+				position: relative
+				padding: 5px 0
+				&::before
+					content: ''
+					position: absolute
+					top: 100%
+					margin-top: 5px
+					left: 50%
+					width: 0
+					height: 4px
+					background-color: transparent
+					transition: all .2s
+					transform: translateX(-50%)
+				&:hover
+					&::before
+						background-color: $color
+						width: 100%
+				a
+					color: inherit
+					text-decoration: none
+					font-size: 20px
+					font-weight: 100
+				&.has-dropdown
+					&::after
+						content: '\e911'
+						font-size: 6px
+						display: inline-block
+						vertical-align: middle
+						position: relative
+						top: -2px
+						margin-left: 7px
+		&__search
+			margin: 6px 30px 0
+			padding: 0
+			line-height: 1
+			background-color: transparent
+			border: none
+			font-size: 15px
+			&::before
+				content: '\e903'
+
 
 
