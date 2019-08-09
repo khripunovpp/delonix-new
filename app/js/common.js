@@ -32,6 +32,10 @@ var servicesMenu = function() {
     function _close() {
         $(servicesNav).removeClass('show');
     }
+
+    $('body').on('click', function(event) {
+        if ($(event.target).closest('.header__services')) _close()
+    });
 }
 
 var search = function() {
@@ -61,7 +65,7 @@ var search = function() {
     $(window).on('resize', function(event) {
         event.preventDefault();
 
-        if(!$(target).hasClass('show')) return false
+        if (!$(target).hasClass('show')) return false
 
         var newCords = _fixCords(_getCords(target))
 
@@ -109,7 +113,24 @@ var search = function() {
     }
 }
 
+var mobileMenu = function() {
+    var trigger = $('.mobileNav__burger'),
+        menu = $('.mobileNav__menu'),
+        cloaseMenuEl = $('.mobileMenu__close');
+
+    trigger.on('click', function(event) {
+        event.preventDefault();
+        menu.addClass('show')
+    });
+
+    cloaseMenuEl.on('click', function(event) {
+        event.preventDefault();
+        menu.removeClass('show')
+    });
+}
+
 $(function() {
     servicesMenu()
     search()
+    mobileMenu()
 });
