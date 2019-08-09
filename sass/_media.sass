@@ -1,7 +1,11 @@
 @import "bourbon"
 
+@media only screen and (max-width : 991px)
+	.slider__item
+		background-image: none !important
+	.slider .slick-dots
+		display: none !important
 
-/* Mobile-first */
 @media only screen and (min-width : 992px)
 	$container: 1140px
 	.mobile
@@ -36,6 +40,7 @@
 			top: 100%
 			left: 0
 			width: 100%
+			overflow: hidden
 			&.show
 				box-shadow: 0 20px 10px 3px rgba(#010101, .2)
 				transform: translate3d(0,0,0)
@@ -217,7 +222,27 @@
 
 	.slider
 		&__item
+			background-size: cover
+			background-position: 50% 50%
+			background-repeat: no-repeat
 			&-inner
 				max-width: $container
+			&-content
+				text-align: left
+				font-size: 16px
+				font-weight: 300
+				padding-right: 50%
+				p
+					font-size: 20px
+				ul
+					font-size: 25px
+				.btn
+					width: auto
+					display: inline-block
+					margin-right: 35px
+				.pdfLink
+					max-width: 200px
+					display: inline-block
+					vertical-align: middle
 
 

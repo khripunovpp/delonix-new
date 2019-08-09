@@ -15,10 +15,8 @@ var Util = {
 var servicesMenu = function() {
 
     $('.services').masonry({
-  // options
-  itemSelector: '.services ul'
-});
-
+        itemSelector: '.services ul'
+    });
 
     var trigger = $('.services-trigger'),
         servicesNav = $('.header__services'),
@@ -151,10 +149,16 @@ var popups = function() {
     });
 }
 
+
+
 $(function() {
-    $('#mainstyle').attr('href', $('#mainstyle').attr('href') + "?" + Util.randomInteger(0, 150)+Util.randomInteger(0, 150)+Util.randomInteger(0, 150))
+    $('#mainstyle').attr('href', $('#mainstyle').attr('href') + "?" + Util.randomInteger(0, 150) + Util.randomInteger(0, 150) + Util.randomInteger(0, 150))
     servicesMenu()
     search()
     mobileMenu()
     popups()
+
+    $('.slider').slick({
+        dots: true
+    })
 });
