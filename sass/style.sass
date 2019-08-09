@@ -8,6 +8,8 @@ $container: 480px
 
 html
 	box-sizing: border-box
+	min-height: 100%
+	height: 100%
 
 *,
 *::after,
@@ -28,6 +30,10 @@ body
 	background-color: #fff
 	text-size-adjust: 100%
 	-webkit-tap-highlight-color: transparent
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	height: 100%
 
 img
 	max-width: 100%	
@@ -36,7 +42,8 @@ img
 
 a
 	border: none	
-	outline: none	
+	outline: none
+	color: inherit
 
 ul
 	list-style-type: none	
@@ -80,11 +87,16 @@ select
 	border: 1px solid
 	line-height: 1
 	padding: 2px 5px
+	background-color: $color
+	color: #fff
+	border: none
 
 .w-page
 	position: relative
-	overflow: hidden
-
+	overflow-x: hidden
+	display: flex
+	flex-direction: column
+	min-height: 100%
 
 .popup
 	position: fixed
@@ -176,13 +188,21 @@ select
 	text-decoration: none
 	padding: 10px 20px
 	cursor: pointer
+	transition: all .2s
 	&:hover
 		background-color: transparent
 		color: $color
+	&--shadow
+		box-shadow: 10px 10px 8px rgba(1,1,1,.18)
+		&:hover
+			background-color: darken($color, 5%)
+			color: #fff
+			box-shadow: 10px 10px 8px transparent
 
 
 @import "header"
 @import "socials"
+@import "slider"
 
 
 //ALWAYS END

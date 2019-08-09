@@ -4,11 +4,17 @@
 	text-align: center
 	line-height: 1
 	padding: 2px 0 4px
+	&__inner
+		@extend %container
+		display: flex
+		align-items: center
+		justify-content: space-between
 	&__socials
 		display: inline-block
 		vertical-align: baseline
 		margin-right: 5px
 		font-size: 25px
+		margin-right: auto
 	&__link
 		color: #fff
 		line-height: 1
@@ -36,8 +42,9 @@
 	text-align: center
 	padding: 25px 0
 	display: flex
-	justify-content: center
+	justify-content: space-between
 	align-items: center
+	@extend %container
 	&__logo
 		margin: 0 20%
 		max-width: 60px
@@ -188,6 +195,9 @@
 		border: none
 		background-color: transparent
 		color: #fff
+	.fileType
+		background-color: transparent
+		border: 1px solid 
 
 .header
 	display: none

@@ -1,0 +1,28 @@
+.slider
+	background-color: #f1f1f1
+	&__item
+		&-inner
+			@extend %container
+			text-align: center
+			font-size: 15px
+			padding: 25px 35px
+			p
+				margin: 0 0 10px
+			img
+			ul
+				text-align: left
+				margin: 20px 0
+			li
+				position: relative
+				padding-left: 10px
+				&::before
+					content: ''
+					position: absolute
+					top: 8px
+					left: 0
+					width: 4px
+					height: 4px
+					background-color: $color
+			.btn
+				max-width: none
+				margin: 10px 0

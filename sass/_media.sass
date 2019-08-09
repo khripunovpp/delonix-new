@@ -3,26 +3,23 @@
 
 /* Mobile-first */
 @media only screen and (min-width : 992px)
+	$container: 1140px
 	.mobile
 		display: none
 
 	.container
-		max-width: 1140px
-
-	.fileType
-		background-color: $color
-		color: #fff
-		border: none
+		max-width: $container
 
 	.header
 		display: block
+		position: relative
 		&__inner
 			padding-left: 190px
 		&__main
 			border-bottom: 2px solid $color
 			background-color: #fff
 			position: relative
-			z-index: 1
+			z-index: 2
 		&__top
 			display: flex
 			margin-bottom: 15px
@@ -34,6 +31,11 @@
 			box-shadow: 0 0 0 0 transparent
 			transform: translate3d(0,-100%,0)
 			transition: all .2s
+			position: absolute
+			z-index: 1
+			top: 100%
+			left: 0
+			width: 100%
 			&.show
 				box-shadow: 0 20px 10px 3px rgba(#010101, .2)
 				transform: translate3d(0,0,0)
@@ -212,5 +214,10 @@
 					margin: 10px 0 0
 				&__helper
 					text-align: left
+
+	.slider
+		&__item
+			&-inner
+				max-width: $container
 
 
