@@ -179,6 +179,7 @@
 	.search
 		max-width: 250px
 		padding: 2px
+		box-shadow: 10px 10px 15px rgba(#010101, .13)
 		&__title,
 		&__close
 			display: none
@@ -189,4 +190,28 @@
 			padding-left: 0
 			&::before
 				display: none
+
+	.popup
+		&__inner
+			padding: 20px
+		&__title
+			font-size: 30px
+			margin-bottom: 15px
+		&__close
+			top: 25px
+
+	.form
+		&__field
+			font-size: 17px
+		&__footer
+			flex-direction: column
+		&--popup
+			.form
+				&__field
+					margin: 0 10px 10px 0
+				&__submit
+					margin: 10px 0 0
+				&__helper
+					text-align: left
+
 

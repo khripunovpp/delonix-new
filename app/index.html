@@ -19,6 +19,27 @@
   </head>
   <body>
     <div class="w-page">
+      <div class="popup popup--callback" id="callback">
+        <table class="popup__wrapper">
+          <tr>
+            <td class="popup__container">
+              <div class="popup__inner">
+                <button class="popup__close"></button>
+                <p class="popup__title">Заказать звонок</p>
+                <div class="popup__form form form--popup">
+                  <input class="form__field" type="text" placeholder="Имя">
+                  <input class="form__field" type="text" placeholder="+7 (___) ___-__-__">
+                  <input class="form__field" type="text" placeholder="E-mail">
+                  <textarea class="form__field" placeholder="Ваш заказ" rows="8"></textarea>
+                  <div class="form__footer"><small class="form__helper">Важно заполнить все поля.</small>
+                    <button class="form__submit btn">Отправить</button>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
       <div class="search">
         <div class="search__inner">
           <p class="search__title">Поиск</p>
@@ -53,7 +74,7 @@
               <div class="mobileMenu__socials">
                 <div class="socials"><a class="socials__item socials__item--instagram" href=""></a><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></div>
               </div><a class="mobileMenu__address" href="">ул. Смольная, д. 24А, офис 43</a><a class="mobileMenu__email" href="">hello@delonix.su</a><a class="mobileMenu__phone" href="">+7 (499) 450-55-74</a>
-              <button class="mobileMenu__openpopup">Заказать звонок</button>
+              <button class="mobileMenu__openpopup js-openpopup" data-popup-id="callback">Заказать звонок</button>
             </div>
           </div>
         </nav>
@@ -65,7 +86,7 @@
               <div class="header__top">
                 <p class="header__address">г. Москва, ул. Смольная, д. 24А, офис 43<a class="header__email" href="">hello@delonix.su</a></p>
                 <div class="header__contacts"><a class="header__phone" href="">+7 (499) 450-55-74</a>
-                  <button class="header__openpopup">Заказать звонок</button>
+                  <button class="header__openpopup js-openpopup" data-popup-id="callback">Заказать звонок</button>
                 </div>
               </div>
               <div class="header__bottom">

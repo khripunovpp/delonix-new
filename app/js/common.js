@@ -129,8 +129,24 @@ var mobileMenu = function() {
     });
 }
 
+var popups = function() {
+    var trigger = $('.js-openpopup'),
+    closePopupEl = $('.popup__close');
+
+    trigger.on('click', function(event) {
+        event.preventDefault();
+        $('.popup#'+$(event.target).attr('data-popup-id')).fadeIn(300);
+    });
+
+    closePopupEl.on('click', function(event) {
+        event.preventDefault();
+        $(event.target).closest('.popup').fadeOut(100)
+    });
+}
+
 $(function() {
     servicesMenu()
     search()
     mobileMenu()
+    popups()
 });

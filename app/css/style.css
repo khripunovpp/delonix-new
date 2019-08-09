@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-.mobileNav__search::before, .mobileNav__burger::before, .search__field::before, .search__close::before, .mobileMenu__close::before, .header__search::before,
+.popup__close::before, .mobileNav__search::before, .mobileNav__burger::before, .search__field::before, .search__close::before, .mobileMenu__close::before, .header__search::before,
 .header__nav li.services-trigger::after, .socials__item::before {
   font-family: 'icomoon' !important;
   speak: none;
@@ -32,20 +32,28 @@ html {
   outline: none;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   color: #bbb;
+  font-family: "Roboto", sans-serif;
 }
 
-input:-moz-placeholder {
+input:-moz-placeholder,
+textarea:-moz-placeholder {
   color: #bbb;
+  font-family: "Roboto", sans-serif;
 }
 
-input::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   color: #bbb;
+  font-family: "Roboto", sans-serif;
 }
 
-input:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   color: #bbb;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -115,6 +123,143 @@ select {
 .w-page {
   position: relative;
   overflow: hidden;
+}
+
+.popup {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  display: none;
+}
+
+.popup__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.popup__container {
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.popup__inner {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 15px;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.15);
+  box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.15);
+}
+
+.popup__title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 100;
+  padding-right: 30px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 10px;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+  font-size: 13px;
+  color: #000;
+  cursor: pointer;
+}
+
+.popup__close::before {
+  content: '\e910';
+}
+
+.popup--callback .popup__inner {
+  max-width: 350px;
+}
+
+.form__field {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  padding: 5px 10px;
+}
+
+.form__submit {
+  margin: 0 auto;
+}
+
+.form__helper {
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+}
+
+.form__footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.form--popup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.form--popup .form__field {
+  border: 1px solid #d2d2d2;
+  margin: 0 5px 5px 0;
+}
+
+.form--popup .form__submit {
+  margin-bottom: 10px;
+  max-width: none;
+}
+
+.form--popup .form__helper {
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  max-width: 200px;
+  display: table;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.2;
+  background-color: #e30b13;
+  border: 1px solid #e30b13;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #e30b13;
 }
 
 .mobileHeader {
@@ -691,6 +836,8 @@ select {
   .search {
     max-width: 250px;
     padding: 2px;
+    -webkit-box-shadow: 10px 10px 15px rgba(1, 1, 1, 0.13);
+    box-shadow: 10px 10px 15px rgba(1, 1, 1, 0.13);
   }
   .search__title, .search__close {
     display: none;
@@ -705,5 +852,34 @@ select {
   }
   .search__field::before {
     display: none;
+  }
+  .popup__inner {
+    padding: 20px;
+  }
+  .popup__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .popup__close {
+    top: 25px;
+  }
+  .form__field {
+    font-size: 17px;
+  }
+  .form__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .form--popup .form__field {
+    margin: 0 10px 10px 0;
+  }
+  .form--popup .form__submit {
+    margin: 10px 0 0;
+  }
+  .form--popup .form__helper {
+    text-align: left;
   }
 }
