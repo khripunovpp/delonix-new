@@ -12,6 +12,28 @@ var Util = {
     }
 }
 
-$(function() {
+var servicesMenu = function() {
+    var trigger = $('.services-trigger'),
+        servicesNav = $('.header__services'),
+        timer;
 
+    trigger.on('mouseenter', function() {
+        $(servicesNav).addClass('show');
+    })
+
+    trigger.add(servicesNav).on('mouseenter', function() {
+        clearTimeout(timer)
+    })
+
+    trigger.add(servicesNav).on('mouseleave', function() {
+        timer = setTimeout(_close, 500)
+    })
+
+    function _close() {
+        $(servicesNav).removeClass('show');
+    }
+}
+
+$(function() {
+    servicesMenu()
 });
