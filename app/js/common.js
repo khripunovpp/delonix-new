@@ -13,6 +13,13 @@ var Util = {
 }
 
 var servicesMenu = function() {
+
+    $('.services').masonry({
+  // options
+  itemSelector: '.services ul'
+});
+
+
     var trigger = $('.services-trigger'),
         servicesNav = $('.header__services'),
         timer;
@@ -131,11 +138,11 @@ var mobileMenu = function() {
 
 var popups = function() {
     var trigger = $('.js-openpopup'),
-    closePopupEl = $('.popup__close');
+        closePopupEl = $('.popup__close');
 
     trigger.on('click', function(event) {
         event.preventDefault();
-        $('.popup#'+$(event.target).attr('data-popup-id')).fadeIn(300);
+        $('.popup#' + $(event.target).attr('data-popup-id')).fadeIn(300);
     });
 
     closePopupEl.on('click', function(event) {
@@ -145,6 +152,7 @@ var popups = function() {
 }
 
 $(function() {
+    $('#mainstyle').attr('href', $('#mainstyle').attr('href') + "?" + Util.randomInteger(0, 150)+Util.randomInteger(0, 150)+Util.randomInteger(0, 150))
     servicesMenu()
     search()
     mobileMenu()
