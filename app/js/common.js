@@ -34,6 +34,82 @@ var servicesMenu = function() {
     }
 }
 
+var search = function() {
+    var trigger = document.querySelector('.header__search'),
+        $triggers = $('.header__search, .mobileNav__search'),
+        searchComponent = $('.search'),
+        closeSearchEl = $('.search__close'),
+        target,
+        cords;
+
+    $triggers.on('click', function(event) {
+        event.preventDefault();
+
+        target = event.target
+
+        if ($(window).width() > 991) {
+            cords = _fixCords(_getCords(target))
+        } else {
+            cords = { top: 0, left: 0 }
+        }
+
+        $(target).hasClass('show') ? _hide() : _show()
+    });
+
+    closeSearchEl.on('click', _hide);
+
+    $(window).on('resize', function(event) {
+        event.preventDefault();
+
+        if(!$(target).hasClass('show')) return false
+
+        var newCords = _fixCords(_getCords(target))
+
+        _moveAndShow(newCords)
+
+        if ($(window).width() < 991) {
+            searchComponent.css({
+                top: 0,
+                left: 0
+            })
+        }
+    });
+
+    function _show() {
+        $(target).addClass('show')
+        _moveAndShow(cords)
+    }
+
+    function _hide() {
+        $(target).removeClass('show')
+        searchComponent.hide().removeClass('show')
+    }
+
+    function _moveAndShow(cords) {
+        searchComponent.css({
+            top: cords.top,
+            left: cords.left
+        }).show().addClass('show');
+    }
+
+    function _fixCords(cords) {
+        return {
+            top: cords.top + $(target).outerHeight() + 14,
+            left: cords.left - searchComponent.outerWidth() + $(target).outerWidth()
+        };
+    }
+
+    function _getCords(elem) {
+        var box = elem.getBoundingClientRect();
+
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+    }
+}
+
 $(function() {
     servicesMenu()
+    search()
 });

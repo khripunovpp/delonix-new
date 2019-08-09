@@ -33,19 +33,19 @@ html {
 }
 
 input::-webkit-input-placeholder {
-  color: #eee;
+  color: #bbb;
 }
 
 input:-moz-placeholder {
-  color: #eee;
+  color: #bbb;
 }
 
 input::-moz-placeholder {
-  color: #eee;
+  color: #bbb;
 }
 
 input:-ms-input-placeholder {
-  color: #eee;
+  color: #bbb;
 }
 
 body {
@@ -110,6 +110,10 @@ select {
   border: 1px solid;
   line-height: 1;
   padding: 2px 5px;
+}
+
+.w-page {
+  position: relative;
 }
 
 .mobileHeader {
@@ -209,6 +213,11 @@ select {
   background-color: #e30b13;
   padding: 50px 0;
   display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .search__inner {
@@ -259,6 +268,7 @@ select {
   background-color: transparent;
   font-size: 13px;
   color: #fff;
+  cursor: pointer;
 }
 
 .search__close::before {
@@ -604,14 +614,36 @@ select {
   }
   .header__search {
     margin: 6px 30px 0;
-    padding: 0;
+    padding: 0 4px;
     line-height: 1;
     background-color: transparent;
     border: none;
     font-size: 15px;
+    position: relative;
+    cursor: pointer;
   }
   .header__search::before {
     content: '\e903';
+  }
+  .header__search::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: transparent;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .header__search.show::after {
+    background-color: #e30b13;
+    width: 100%;
   }
   .header .services {
     color: #fff;
@@ -647,5 +679,23 @@ select {
   .header .services__groupCaption {
     font-size: 16px;
     font-weight: 500 !important;
+  }
+  .search {
+    max-width: 250px;
+    padding: 2px;
+  }
+  .search__title, .search__close {
+    display: none;
+  }
+  .search__inner {
+    padding: 0;
+  }
+  .search__field {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 0;
+  }
+  .search__field::before {
+    display: none;
   }
 }

@@ -68,6 +68,11 @@
 	background-color: $color
 	padding: 50px 0
 	display: none
+	position: fixed
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
 	&__inner
 		@extend %container
 		position: relative
@@ -107,6 +112,7 @@
 		background-color: transparent
 		font-size: 13px
 		color: #fff
+		cursor: pointer
 		&::before
 			@extend %icon
 			content: '\e910'

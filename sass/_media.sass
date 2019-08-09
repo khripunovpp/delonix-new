@@ -129,13 +129,30 @@
 						margin-left: 7px
 		&__search
 			margin: 6px 30px 0
-			padding: 0
+			padding: 0 4px
 			line-height: 1
 			background-color: transparent
 			border: none
 			font-size: 15px
+			position: relative
+			cursor: pointer
 			&::before
 				content: '\e903'
+			&::after
+				content: ''
+				position: absolute
+				top: 100%
+				margin-top: 10px
+				left: 50%
+				width: 0
+				height: 4px
+				background-color: transparent
+				transition: all .2s
+				transform: translateX(-50%)
+			&.show
+				&::after
+					background-color: $color
+					width: 100%
 		.services
 			color: #fff
 			padding-top: 25px
@@ -159,6 +176,17 @@
 				font-size: 16px
 				font-weight: 500 !important
 
-
-
+	.search
+		max-width: 250px
+		padding: 2px
+		&__title,
+		&__close
+			display: none
+		&__inner
+			padding: 0
+		&__field
+			box-shadow: none
+			padding-left: 0
+			&::before
+				display: none
 
