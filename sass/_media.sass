@@ -20,13 +20,16 @@
 @media only screen and (min-width : 480px)
 	.slick-prev
 		left: 50%
-		margin-left: -255px
+		margin-left: -245px
 	.slick-next
 		right: 50%
-		margin-right: -255px
+		margin-right: -245px
 	.clientsMain 
 		&__list
 			padding: 0 10px
+		.slick-list
+			max-width: none
+	.opinionMain
 		.slick-list
 			max-width: none
 
@@ -279,10 +282,10 @@
 					vertical-align: middle
 
 	.slick-prev
-		left: -5px
+		left: 5px
 		margin-left: 0
 	.slick-next
-		right: -5px
+		right: 5px
 		margin-right: 0
 
 	.servicesMain
@@ -451,11 +454,25 @@
 				left: 0
 				width: 500px
 				height: 293px
+	.opinionMain
+		&__item
+			margin: 0 10px
+		.slick-list
+			overflow: hidden
+			padding-left: 10px
+			padding-right: 10px
 
 @media only screen and (min-width : 1160px)
 	.slick-prev
 		left: 50%
-		margin-left: -595px
+		margin-left: -585px
 	.slick-next
 		right: 50%
-		margin-right: -595px	
+		margin-right: -585px	
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+	.orderMain .form
+		&__field
+			width: auto
+		&__submit
+			width: auto

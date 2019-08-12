@@ -1,0 +1,70 @@
+.opinionMain
+	padding-top: 40px
+	background-color: $color
+	&__title,
+	&__subtitle
+		text-align: center
+		color: #fff
+	&__title
+		margin: 0 0 5px
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+	&__subtitle
+		margin: 0
+		font-weight: 300
+		font-size: 14px
+	&__list
+		margin: 25px 0 0
+	&__item
+		display: block
+		min-height: 380px
+		position: relative
+		background-size: cover
+		background-position: 50% 50%
+		background-color: #f1f1f1
+		margin: 0 5px
+		transition: all .2s
+		&.slick-active
+			box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18)
+	&__info
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 100%
+		background-color: rgba(#fff, .8)
+		padding: 15px 20px
+	&__tags
+		margin-bottom: 5px
+		margin-left: -2px
+		margin-right: -2px
+	&__theme
+		font-size: 14px
+		line-height: 1.2
+		font-weight: 500
+		margin: 0
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.slick-list
+		padding-bottom: 16px
+		max-width: 220px
+		overflow: visible
+		margin: 0 auto
+
+.tags
+	&__item
+		background-color: $color
+		display: inline-block
+		margin: 2px
+		color: #fff
+		font-size: 13px
+		text-transform: lowercase
+		text-decoration: none
+		border-radius: 3px
+		line-height: 1
+		white-space: nowrap
+		padding: 1px 4px
+		&:hover
+			background-color: transparent
+			color: $color

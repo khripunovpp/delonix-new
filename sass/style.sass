@@ -233,8 +233,8 @@ select
 
 .slick-arrow
 	font-size: 0
-	padding: 15px
-	background-color: transparent
+	padding: 15px 5px
+	background-color: rgba(255,255,255,.5)
 	border: none
 	position: absolute
 	z-index: 1
@@ -252,17 +252,17 @@ select
 	&:hover
 		opacity: 1
 .slick-next
-	right: -10px
+	right: 0px
 	&:hover
 		transform: translateX(10px) scale(.85)
 .slick-prev
-	left: -10px
+	left: 0
 	&::before
 		transform: scale(-1,1)
 	&:hover
 		transform: translateX(-10px) scale(.85)
 
-		
+
 
 @import "header"
 @import "socials"
@@ -272,6 +272,7 @@ select
 @import "clientsMain"
 @import "orderMain"
 @import "advantagesMain"
+@import "opinionMain"
 
 
 //ALWAYS END
