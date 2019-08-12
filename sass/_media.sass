@@ -1,10 +1,20 @@
 @import "bourbon"
 
 @media only screen and (max-width : 991px)
-	.slider__item
-		background-image: none !important
-	.slider .slick-dots
-		display: none !important
+	.slider	
+		&__item
+			background-image: none !important
+		.slick-dots
+			display: none !important
+
+@media only screen and (min-width : 480px)
+	.slider 
+		.slick-prev
+			left: 50%
+			margin-left: -240px
+		.slick-next
+			right: 50%
+			margin-right: -240px	
 
 @media only screen and (min-width : 992px)
 	$container: 1140px
@@ -244,5 +254,18 @@
 					max-width: 200px
 					display: inline-block
 					vertical-align: middle
+		.slick-prev
+			left: 10px
+			margin-left: 0
+		.slick-next
+			right: 10px
+			margin-right: 0
 
-
+@media only screen and (min-width : 1140px)
+	.slider	
+		.slick-prev
+			left: 50%
+			margin-left: -570px
+		.slick-next
+			right: 50%
+			margin-right: -570px	
