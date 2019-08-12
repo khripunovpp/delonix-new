@@ -6,6 +6,16 @@
 			background-image: none !important
 		.slick-dots
 			display: none !important
+	.servicesMain
+		.services__groupCaption
+			background-image: none !important
+		.services 
+			height: auto !important
+			ul
+				position: relative !important
+				left: auto !important
+				top: auto !important
+				transform: none !important
 
 @media only screen and (min-width : 480px)
 	.slider 
@@ -177,7 +187,7 @@
 			padding-left: 190px
 			ul
 				margin: 0 4px 4px 0
-				width: 250px
+				width: 25%
 			li
 				font-weight: 100
 			a
@@ -189,6 +199,7 @@
 				font-size: 16px
 				font-weight: 500 !important
 				margin: 8px 0 !important
+				background-image: none !important
 				&:only-child
 					margin-bottom: 0 !important
 
@@ -229,6 +240,10 @@
 					margin: 10px 0 0
 				&__helper
 					text-align: left
+		&--horizontal
+			display: flex
+			justify-content: space-between
+			align-items: center
 
 	.slider
 		&__item
@@ -260,6 +275,52 @@
 		.slick-next
 			right: -5px
 			margin-right: 0
+
+	.servicesMain
+		padding: 40px 0 0
+		background-color: #fff
+		background-image: linear-gradient(to bottom, $color 50%, 50%, #fff)
+		&__inner
+			padding: 0 45px
+		&__title
+			font-size: 50px
+			margin-bottom: 0
+		&__subtitle
+			font-size: 20px
+		&__box
+			margin: 20px 0 0
+		.services
+			font-size: 17px
+			text-align: left
+			ul
+				margin: 0 25px 25px 0
+				width: 29%
+			li
+				padding-left: 45px
+			&__groupCaption
+				font-size: 25px !important
+				margin-bottom: 10px
+		&__form
+			background-color: $color
+			margin: 0 50px
+		.form
+			padding: 20px
+			&__btn,
+			&__submit
+				margin: 0
+				max-width: none
+				width: auto
+			&__btn
+				text-transform: uppercase
+				padding: 7px 10px
+				margin-left: 30px
+			&__submit
+				margin-left: auto
+				margin-right: 30px
+			&__field
+				margin-right: 20px
+				margin-bottom: 0
+				flex: 1 0 155px
 
 @media only screen and (min-width : 1140px)
 	.slider	

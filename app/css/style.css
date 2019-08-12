@@ -331,6 +331,20 @@ select {
   background-color: transparent;
 }
 
+.services__groupCaption {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.services li {
+  position: relative;
+}
+
+.services li sup {
+  font-size: 11px;
+  margin-left: 5px;
+}
+
 .mobileHeader {
   background-color: #e30b13;
   color: #fff;
@@ -837,12 +851,13 @@ select {
 }
 
 .servicesMain .form__btn, .servicesMain .form__submit {
-  max-width: none;
-  margin: 5px 0;
+  max-width: 320px;
+  margin: 5px auto;
 }
 
 .servicesMain .services ul {
   margin: 0 0 4px;
+  width: 100%;
 }
 
 .servicesMain .services ul:last-child {
@@ -878,6 +893,20 @@ select {
   }
   .slider .slick-dots {
     display: none !important;
+  }
+  .servicesMain .services__groupCaption {
+    background-image: none !important;
+  }
+  .servicesMain .services {
+    height: auto !important;
+  }
+  .servicesMain .services ul {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
   }
 }
 
@@ -1111,7 +1140,7 @@ select {
   }
   .header .services ul {
     margin: 0 4px 4px 0;
-    width: 250px;
+    width: 25%;
   }
   .header .services li {
     font-weight: 100;
@@ -1127,6 +1156,7 @@ select {
     font-size: 16px;
     font-weight: 500 !important;
     margin: 8px 0 !important;
+    background-image: none !important;
   }
   .header .services__groupCaption:only-child {
     margin-bottom: 0 !important;
@@ -1180,6 +1210,20 @@ select {
   .form--popup .form__helper {
     text-align: left;
   }
+  .form--horizontal {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
   .slider__item {
     background-size: cover;
     background-position: 50% 50%;
@@ -1217,6 +1261,70 @@ select {
   .slider .slick-next {
     right: -5px;
     margin-right: 0;
+  }
+  .servicesMain {
+    padding: 40px 0 0;
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e30b13), color-stop(50%), to(#fff));
+    background-image: -o-linear-gradient(top, #e30b13 50%, 50%, #fff);
+    background-image: linear-gradient(to bottom, #e30b13 50%, 50%, #fff);
+  }
+  .servicesMain__inner {
+    padding: 0 45px;
+  }
+  .servicesMain__title {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+  .servicesMain__subtitle {
+    font-size: 20px;
+  }
+  .servicesMain__box {
+    margin: 20px 0 0;
+  }
+  .servicesMain .services {
+    font-size: 17px;
+    text-align: left;
+  }
+  .servicesMain .services ul {
+    margin: 0 25px 25px 0;
+    width: 29%;
+  }
+  .servicesMain .services li {
+    padding-left: 45px;
+  }
+  .servicesMain .services__groupCaption {
+    font-size: 25px !important;
+    margin-bottom: 10px;
+  }
+  .servicesMain__form {
+    background-color: #e30b13;
+    margin: 0 50px;
+  }
+  .servicesMain .form {
+    padding: 20px;
+  }
+  .servicesMain .form__btn, .servicesMain .form__submit {
+    margin: 0;
+    max-width: none;
+    width: auto;
+  }
+  .servicesMain .form__btn {
+    text-transform: uppercase;
+    padding: 7px 10px;
+    margin-left: 30px;
+  }
+  .servicesMain .form__submit {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+  .servicesMain .form__field {
+    margin-right: 20px;
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 155px;
+    -ms-flex: 1 0 155px;
+    flex: 1 0 155px;
   }
 }
 

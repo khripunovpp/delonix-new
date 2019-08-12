@@ -14,8 +14,9 @@ var Util = {
 
 var servicesMenu = function() {
 
-    $('.header__services .services').masonry({
-        itemSelector: '.services ul'
+    $('.services').masonry({
+        itemSelector: '.services ul',
+        columnWidth: '.services ul'
     });
 
     var trigger = $('.services-trigger'),
@@ -161,4 +162,5 @@ $(function() {
     $('.slider').slick({
         dots: true
     })
+
 });
