@@ -267,6 +267,8 @@
 					font-size: 20px
 				ul
 					font-size: 25px
+				li::before
+					top: 15px
 				.btn
 					width: auto
 					display: inline-block
@@ -366,6 +368,89 @@
 		.form
 			&__submit
 				margin-top: 0
+
+	.advantagesMain
+		display: block
+		padding-top: 50px
+		background-color: $color
+		color: #fff
+		font-size: 16px
+		font-weight: 300
+		position: relative
+		z-index: -1
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			clip-path: polygon(52% 0, 0% 100%, 100% 100%)
+			height: 90px
+			width: 2000px
+			top: -89px
+			margin-left: -1000px
+			background-color: $color
+		&__title
+			font-size: 30px
+			font-weight: 700
+			text-transform: uppercase
+			margin: 0
+		&__list
+			display: flex
+			padding: 0 20px
+		&__item
+			flex: 1 1 20%
+			margin: 0 15px
+			font-size: 16px
+			padding-top: 150px
+			position: relative
+			&::before
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translateX(-50%)
+				font-size: 130px
+				opacity: .7
+			&--1
+				&::before
+					content: '\e90d'
+			&--2
+				&::before
+					content: '\e90e'
+			&--3
+				&::before
+					content: '\e905'
+			&--4
+				&::before
+					content: '\e90c'
+			&--5
+				&::before
+					content: '\e906'
+		&__top
+			text-align: center
+			.advantagesMain__title
+				margin-bottom: 55px
+		&__bottom
+			padding-top: 80px
+			text-align: left
+			padding-left: 50%
+			min-height: 400px
+			position: relative
+			.advantagesMain__title
+				margin-bottom: 30px
+			li
+				padding-left: 30px
+				margin: 0 0 10px
+			p
+				margin: 0 0 10px
+			&>*:last-child
+				margin-bottom: 0
+			&::before
+				content: ''
+				background-image: url(../img/advantages-man.png)
+				position: absolute
+				top: 100px
+				left: 0
+				width: 500px
+				height: 293px
 
 @media only screen and (min-width : 1160px)
 	.slick-prev
