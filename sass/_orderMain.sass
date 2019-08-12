@@ -1,0 +1,35 @@
+.orderMain
+	margin-top: 297px
+	&__inner
+		padding-top: 100px
+		background-color: #f1f1f1
+		padding: 25px
+		box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18)
+		position: relative
+		&::before
+			content: ''
+			background-image: url(../img/order-man.png)
+			background-size: cover
+			width: 197px
+			height: 253px
+			position: absolute
+			top: -253px
+			left: 50%
+			margin-left: -100px
+	&__title
+		text-align: center
+		margin: 0 0 10px
+		font-size: 18px
+		font-weight: 300
+	&__text
+		display: none
+	&__form
+		margin-top: 15px
+	.form
+		align-items: center
+		&__field
+			margin-right: 20px
+		&__submit
+			padding: 4px 20px
+			margin-top: 10px
+			max-width: none

@@ -239,7 +239,7 @@
 		&--popup
 			.form
 				&__field
-					margin: 0 10px 10px 0
+					margin-right: 10px
 				&__submit
 					margin: 10px 0 0
 				&__helper
@@ -248,6 +248,8 @@
 			display: flex
 			justify-content: space-between
 			align-items: center
+			.form__field
+				margin-bottom: 0
 
 	.slider
 		&__item
@@ -341,6 +343,29 @@
 			margin: 0 20px
 		.slick-list
 			max-width: none
+
+	.orderMain
+		margin-top: 160px
+		&__inner
+			padding: 20px
+			padding-left: 320px
+			&::before
+				left: 160px
+				bottom: 0
+				top: auto
+		&__title
+			text-align: left
+			margin: 0 0 5px
+			font-size: 30px
+			font-weight: 300
+		&__text
+			margin: 0
+			font-size: 16px
+			font-weight: 300
+			display: block
+		.form
+			&__submit
+				margin-top: 0
 
 @media only screen and (min-width : 1160px)
 	.slick-prev
