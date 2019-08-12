@@ -355,7 +355,7 @@ select {
   position: absolute;
   z-index: 1;
   top: 50%;
-  margin-top: -20px;
+  margin-top: -25px;
   cursor: pointer;
   -webkit-transition: all .2s;
   -o-transition: all .2s;
@@ -934,6 +934,30 @@ select {
   display: flex;
 }
 
+.clientsMain {
+  padding: 60px 0 0;
+}
+
+.clientsMain__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+
+.clientsMain .slick-list {
+  margin: 0 auto;
+  max-width: 180px;
+}
+
+.clientsMain__item {
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  margin: 0 5px;
+}
+
 @media only screen and (max-width: 991px) {
   .slider__item {
     background-image: none !important;
@@ -965,6 +989,12 @@ select {
   .slick-next {
     right: 50%;
     margin-right: -255px;
+  }
+  .clientsMain__list {
+    padding: 0 10px;
+  }
+  .clientsMain .slick-list {
+    max-width: none;
   }
 }
 
@@ -1379,6 +1409,15 @@ select {
   }
   .portfolioMain__item {
     margin: 0 10px;
+  }
+  .clientsMain__list {
+    padding: 0 20px;
+  }
+  .clientsMain__item {
+    margin: 0 20px;
+  }
+  .clientsMain .slick-list {
+    max-width: none;
   }
 }
 
