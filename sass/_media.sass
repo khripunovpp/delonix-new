@@ -18,13 +18,12 @@
 				transform: none !important
 
 @media only screen and (min-width : 480px)
-	.slider 
-		.slick-prev
-			left: 50%
-			margin-left: -255px
-		.slick-next
-			right: 50%
-			margin-right: -255px	
+	.slick-prev
+		left: 50%
+		margin-left: -255px
+	.slick-next
+		right: 50%
+		margin-right: -255px	
 
 @media only screen and (min-width : 992px)
 	$container: 1140px
@@ -269,12 +268,13 @@
 					max-width: 200px
 					display: inline-block
 					vertical-align: middle
-		.slick-prev
-			left: -5px
-			margin-left: 0
-		.slick-next
-			right: -5px
-			margin-right: 0
+
+	.slick-prev
+		left: -5px
+		margin-left: 0
+	.slick-next
+		right: -5px
+		margin-right: 0
 
 	.servicesMain
 		padding: 40px 0 0
@@ -289,12 +289,13 @@
 			font-size: 20px
 		&__box
 			margin: 20px 0 0
+			padding: 15px 20px
 		.services
 			font-size: 17px
 			text-align: left
 			ul
 				margin: 0 25px 25px 0
-				width: 29%
+				width: 28%
 			li
 				padding-left: 45px
 			&__groupCaption
@@ -322,11 +323,16 @@
 				margin-bottom: 0
 				flex: 1 0 155px
 
-@media only screen and (min-width : 1140px)
-	.slider	
-		.slick-prev
-			left: 50%
-			margin-left: -575px
-		.slick-next
-			right: 50%
-			margin-right: -575px	
+	.portfolioMain
+		&__list
+			padding: 0 20px
+		&__item
+			margin: 0 10px
+
+@media only screen and (min-width : 1160px)
+	.slick-prev
+		left: 50%
+		margin-left: -595px
+	.slick-next
+		right: 50%
+		margin-right: -595px	

@@ -153,8 +153,12 @@ var popups = function() {
 
 
 $(function() {
-    $('#mainstyle').attr('href', $('#mainstyle').attr('href') + "?" + Util.randomInteger(0, 150) + Util.randomInteger(0, 150) + Util.randomInteger(0, 150))
     servicesMenu()
+
+    ////
+    $('#mainstyle').attr('href', $('#mainstyle').attr('href') + "?" + Util.randomInteger(0, 150) + Util.randomInteger(0, 150) + Util.randomInteger(0, 150))
+    ////
+
     search()
     mobileMenu()
     popups()
@@ -162,5 +166,20 @@ $(function() {
     $('.slider').slick({
         dots: true
     })
+
+         $('.portfolioMain__list').lightGallery({selector: '.portfolioMain__item'})
+
+    $('.portfolioMain__list').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    })
+
 
 });

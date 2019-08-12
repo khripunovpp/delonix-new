@@ -1,0 +1,27 @@
+.portfolioMain
+	padding: 60px 0 0
+	&__title
+		text-align: center
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+		margin: 0 0 30px
+	&__item
+		font-size: 0
+		border: 1px solid #9d9d9c
+		border-radius: 2px
+		height: auto
+		margin: 0 5px
+		opacity: .5
+		transition: opacity .1s
+		box-shadow: 0 0 5px rgba(#010101, .25)
+		position: relative
+		background-size: cover
+		background-position: 50% 50%
+		padding-bottom: 8%
+		&.slick-active
+			opacity: 1
+	.slick-list
+		overflow: visible
+	.slick-track
+		display: flex
