@@ -14,7 +14,7 @@ var Util = {
 
 var servicesMenu = function() {
 
-    $('.services').masonry({
+    $('.header__services .services').masonry({
         itemSelector: '.services ul'
     });
 

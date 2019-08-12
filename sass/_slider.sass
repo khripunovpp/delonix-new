@@ -7,7 +7,7 @@
 		&-content
 			text-align: center
 			font-size: 15px
-			padding: 25px 35px
+			padding: 25px 20px
 			p
 				margin: 0 0 10px
 			img
@@ -28,9 +28,11 @@
 			.btn
 				max-width: none
 				margin: 10px 0
+	.slick-slide img
+		display: inline-block
 	.slick-arrow
 		font-size: 0
-		padding: 0
+		padding: 15px
 		background-color: transparent
 		border: none
 		position: absolute
@@ -39,18 +41,21 @@
 		margin-top: -13px
 		cursor: pointer
 		transition: all .2s
+		opacity: .7
 		&::before
 			@extend %icon
 			content: '\e904'
 			font-size: 25px
 			color: #050505
 			display: inline-block
+		&:hover
+			opacity: 1
 	.slick-next
-		right: 10px
+		right: -10px
 		&:hover
 			transform: translateX(10px) scale(.85)
 	.slick-prev
-		left: 10px
+		left: -10px
 		&::before
 			transform: scale(-1,1)
 		&:hover
