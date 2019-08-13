@@ -1,6 +1,13 @@
 .slider
 	background-color: #f1f1f1
 	position: relative
+	visibility: hidden
+	height: 1px
+	overflow: hidden
+	&.slick-initialized
+		height: auto
+		overflow: visible
+		visibility: visible
 	&__item
 		&-inner
 			@extend %container

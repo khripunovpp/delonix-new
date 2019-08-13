@@ -8,6 +8,13 @@
 		text-transform: uppercase
 		margin: 0 0 30px
 	&__list
+		visibility: hidden
+		height: 1px
+		overflow: hidden
+		&.slick-initialized
+			height: auto
+			overflow: visible
+			visibility: visible
 	.slick-list
 		margin: 0 auto
 		max-width: 180px

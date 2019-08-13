@@ -18,6 +18,13 @@
 	&__list
 		margin: 25px 0 0
 		z-index: 2
+		visibility: hidden
+		height: 1px
+		overflow: hidden
+		&.slick-initialized
+			height: auto
+			overflow: visible
+			visibility: visible
 	&__item
 		display: block
 		min-height: 380px

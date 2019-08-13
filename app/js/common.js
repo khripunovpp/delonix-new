@@ -150,6 +150,15 @@ var popups = function() {
     });
 }
 
+var setImgRatio = function(el) {
+    $(el).each(function() {
+        var fillClass = ($(this).height() > $(this).width()) ?
+            'fillheight' :
+            'fillwidth';
+        $(this).addClass(fillClass);
+    });
+}
+
 
 
 $(function() {
@@ -220,4 +229,6 @@ $(function() {
             }
         ]
     })
+
+    setImgRatio('.portfolioMain__item img')
 });

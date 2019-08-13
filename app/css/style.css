@@ -739,6 +739,15 @@ select {
 .slider {
   background-color: #f1f1f1;
   position: relative;
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+}
+
+.slider.slick-initialized {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 
 .slider__item-content {
@@ -915,14 +924,46 @@ select {
   -webkit-box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
   box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
   position: relative;
-  background-size: cover;
-  background-position: 50% 50%;
-  padding-bottom: 8%;
   cursor: pointer;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.portfolioMain__item img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.portfolioMain__item:hover img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .portfolioMain__item.slick-active {
   opacity: 1;
+}
+
+.portfolioMain__list {
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+}
+
+.portfolioMain__list.slick-initialized {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 
 .portfolioMain .slick-list {
@@ -947,6 +988,18 @@ select {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 30px;
+}
+
+.clientsMain__list {
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+}
+
+.clientsMain__list.slick-initialized {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 
 .clientsMain .slick-list {
@@ -1003,21 +1056,16 @@ select {
   margin-top: 15px;
 }
 
-.orderMain .form {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .orderMain .form__field {
   margin-right: 20px;
+  max-width: 180px;
 }
 
 .orderMain .form__submit {
   padding: 4px 20px;
   margin-top: 10px;
-  max-width: none;
+  max-width: 180px;
+  display: inline-block;
 }
 
 .advantagesMain {
@@ -1051,6 +1099,15 @@ select {
 .opinionMain__list {
   margin: 25px 0 0;
   z-index: 2;
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+}
+
+.opinionMain__list.slick-initialized {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 
 .opinionMain__item {
@@ -2069,5 +2126,23 @@ select {
   }
   .orderMain .form__submit {
     width: auto;
+  }
+  .portfolioMain__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .portfolioMain__item img {
+    width: auto;
+    height: auto;
   }
 }
