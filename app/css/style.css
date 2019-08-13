@@ -22,8 +22,6 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  min-height: 100%;
-  height: 100%;
 }
 
 *,
@@ -79,8 +77,6 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100%;
-  height: 100%;
 }
 
 img {
@@ -139,17 +135,7 @@ select {
 
 .w-page {
   position: relative;
-  overflow-x: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 100%;
+  overflow: hidden;
 }
 
 .popup {
@@ -354,7 +340,7 @@ select {
 .slick-arrow {
   font-size: 0;
   padding: 15px 5px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
   border: none;
   position: absolute;
   z-index: 1;
@@ -1135,6 +1121,9 @@ select {
 }
 
 @media only screen and (max-width: 991px) {
+  .slick-arrow {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
   .slider__item {
     background-image: none !important;
   }
@@ -1174,6 +1163,7 @@ select {
   }
   .opinionMain .slick-list {
     max-width: none;
+    overflow: hidden;
   }
 }
 
