@@ -934,6 +934,7 @@ select {
 
 .clientsMain {
   padding: 60px 0 0;
+  background-color: #fff;
 }
 
 .clientsMain__title {
@@ -958,6 +959,8 @@ select {
 
 .orderMain {
   margin-top: 297px;
+  position: relative;
+  z-index: 2;
 }
 
 .orderMain__inner {
@@ -1018,7 +1021,8 @@ select {
 }
 
 .opinionMain {
-  padding-top: 40px;
+  padding-top: 180px;
+  margin-top: -140px;
   background-color: #e30b13;
 }
 
@@ -1042,7 +1046,7 @@ select {
 
 .opinionMain__list {
   margin: 25px 0 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .opinionMain__item {
@@ -1711,7 +1715,7 @@ select {
     font-size: 16px;
     font-weight: 300;
     position: relative;
-    z-index: -1;
+    z-index: 1;
   }
   .advantagesMain::before {
     content: '';
@@ -1821,6 +1825,23 @@ select {
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: 1;
+  }
+  .contactsMain {
+    position: relative;
+  }
+  .contactsMain::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    -webkit-clip-path: polygon(52% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(52% 0, 0% 100%, 100% 100%);
+    height: 90px;
+    width: 2000px;
+    top: -89px;
+    margin-left: -1000px;
+    background-color: #fff;
   }
   .contactsMain__title {
     font-size: 50px;
