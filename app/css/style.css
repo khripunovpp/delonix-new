@@ -1212,8 +1212,24 @@ select {
   color: #fff;
 }
 
+.footer__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .footer__links {
   margin-bottom: 30px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .footer__links li {
@@ -1238,6 +1254,10 @@ select {
   margin-top: 30px;
   font-size: 16px;
   font-weight: 100;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
 }
 
 .footer__contacts p {
@@ -1253,10 +1273,18 @@ select {
   text-decoration: underline;
 }
 
+.footer__email {
+  display: block;
+}
+
 .footer__sitemap {
   font-weight: 100;
   font-size: 16px;
   text-decoration: none;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .footer__sitemap:hover {
@@ -1273,6 +1301,10 @@ select {
   display: block;
   font-size: 16px;
   font-weight: 100;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
 }
 
 .footer__copyright a:hover {
@@ -1971,6 +2003,52 @@ select {
   }
   .contactsMain__map {
     height: 520px;
+  }
+  .footer {
+    text-align: left;
+  }
+  .footer__inner {
+    overflow: auto;
+    display: block;
+  }
+  .footer__contacts {
+    float: right;
+    width: 35%;
+    margin-top: 0;
+    text-align: right;
+  }
+  .footer__socials {
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 0;
+    margin-right: 10px;
+  }
+  .footer__phones {
+    line-height: 1;
+    margin-top: -4px;
+  }
+  .footer__links, .footer__sitemap, .footer__copyright {
+    width: 65%;
+  }
+  .footer__links {
+    margin-bottom: 20px;
+  }
+  .footer__links ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .footer__name {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .footer__copyright {
+    margin-top: 20px;
   }
 }
 

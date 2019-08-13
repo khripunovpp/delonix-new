@@ -4,8 +4,12 @@
 	margin-top: 30px
 	padding: 25px 0
 	color: #fff
+	&__inner
+		display: flex
+		flex-direction: column
 	&__links
 		margin-bottom: 30px
+		order: 1
 		li
 			line-height: 1
 			a
@@ -20,6 +24,7 @@
 		margin-top: 30px
 		font-size: 16px
 		font-weight: 100
+		order: 3
 		p
 			margin: 0
 			line-height: 1.3
@@ -27,10 +32,13 @@
 			text-decoration: none
 			&:hover
 				text-decoration: underline
+	&__email
+		display: block
 	&__sitemap
 		font-weight: 100
 		font-size: 16px
 		text-decoration: none
+		order: 2
 		&:hover
 			text-decoration: underline
 	&__socials
@@ -41,6 +49,7 @@
 		display: block
 		font-size: 16px
 		font-weight: 100
+		order: 4
 		a
 			&:hover
 				text-decoration: none
