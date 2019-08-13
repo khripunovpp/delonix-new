@@ -465,7 +465,8 @@ select {
 
 .mobileNav__logo {
   margin: 0 20%;
-  max-width: 60px;
+  display: inline-block;
+  width: 60px;
 }
 
 .mobileNav__search, .mobileNav__burger {
@@ -732,8 +733,9 @@ select {
 }
 
 .socials__item:hover {
-  background: transparent;
-  color: #000;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .slider {
@@ -1487,6 +1489,7 @@ select {
     position: absolute;
     left: 0;
     top: 10px;
+    width: 75px;
   }
   .header__address {
     font-size: 18px;
@@ -2067,7 +2070,7 @@ select {
     text-align: left;
   }
   .footer__inner {
-    overflow: auto;
+    overflow: visible;
     display: block;
   }
   .footer__contacts {

@@ -13,8 +13,9 @@ section.mobile
 			a.mobileHeader__link.mobileHeader__link--email(href="") hello@delonix.su
 	nav.mobileNav
 		button.mobileNav__search
-		a(href="").mobileNav__logo
-			img(src="img/logo.png", alt="")
+		a.mobileNav__logo(href="").logo
+			include ../app/img/logo-top.svg
+			include ../app/img/logo-bottom.svg
 		button.mobileNav__burger
 		section.mobileNav__menu.mobileMenu
 			.mobileMenu__inner
@@ -31,8 +32,9 @@ header.header
 	.header__main
 		.container
 			.header__inner
-				a(href="").header__logo
-					img(src="img/logo.png", alt="")
+				a(href="").header__logo.logo
+					include ../app/img/logo-top.svg
+					include ../app/img/logo-bottom.svg
 				.header__top
 					p.header__address г. Москва, ул. Смольная, д. 24А, офис 43
 						a.header__email(href="") hello@delonix.su
