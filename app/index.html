@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="w-page">
-      <div class="popup popup--callback" id="callback">
+      <aside class="popup popup--callback" id="callback">
         <table class="popup__wrapper">
           <tr>
             <td class="popup__container">
@@ -41,8 +41,8 @@
             </td>
           </tr>
         </table>
-      </div>
-      <div class="search">
+      </aside>
+      <section class="search">
         <div class="search__inner">
           <p class="search__title">Поиск</p>
           <button class="search__close"></button>
@@ -50,19 +50,19 @@
             <input type="search" placeholder="Искать">
           </div>
         </div>
-      </div>
-      <div class="mobile">
+      </section>
+      <section class="mobile">
         <header class="mobileHeader">
           <div class="mobileHeader__inner">
             <div class="mobileHeader__socials">
-              <div class="socials"><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></div>
+              <nav class="socials"><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></nav>
             </div><a class="mobileHeader__link mobileHeader__link--phone" href="">+7(499)450-55-74</a><a class="mobileHeader__link mobileHeader__link--email" href="">hello@delonix.su</a>
           </div>
         </header>
         <nav class="mobileNav">
           <button class="mobileNav__search"></button><a class="mobileNav__logo" href=""><img src="img/logo.png" alt=""></a>
           <button class="mobileNav__burger"></button>
-          <div class="mobileNav__menu mobileMenu">
+          <section class="mobileNav__menu mobileMenu">
             <div class="mobileMenu__inner">
               <p class="mobileMenu__title">Меню</p>
               <button class="mobileMenu__close"></button>
@@ -74,14 +74,14 @@
                 <li><a href="">Скачать прайс <small class="fileType">.pdf</small></a></li>
               </ul>
               <div class="mobileMenu__socials">
-                <div class="socials"><a class="socials__item socials__item--instagram" href=""></a><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></div>
+                <nav class="socials"><a class="socials__item socials__item--instagram" href=""></a><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></nav>
               </div><a class="mobileMenu__address" href="">ул. Смольная, д. 24А, офис 43</a><a class="mobileMenu__email" href="">hello@delonix.su</a><a class="mobileMenu__phone" href="">+7 (499) 450-55-74</a>
               <button class="mobileMenu__openpopup js-openpopup" data-popup-id="callback">Заказать звонок</button>
             </div>
-          </div>
+          </section>
         </nav>
-      </div>
-      <div class="header">
+      </section>
+      <header class="header">
         <div class="header__main">
           <div class="container">
             <div class="header__inner"><a class="header__logo" href=""><img src="img/logo.png" alt=""></a>
@@ -102,14 +102,14 @@
                   </ul>
                 </nav>
                 <button class="header__search"></button>
-                <div class="header__socials">
-                  <div class="socials"><a class="socials__item socials__item--instagram" href=""></a><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></div>
-                </div>
+                <nav class="header__socials">
+                  <nav class="socials"><a class="socials__item socials__item--instagram" href=""></a><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></nav>
+                </nav>
               </div>
             </div>
           </div>
         </div>
-        <div class="header__services">
+        <section class="header__services">
           <div class="container">
             <div class="services">
               <ul>
@@ -159,8 +159,8 @@
               </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </header>
       <section class="slider">
         <article class="slider__item" style="background-image:url(img/slide-1.png)">
           <div class="slider__item-inner">
@@ -189,12 +189,12 @@
           </div>
         </article>
       </section>
-      <div class="servicesMain">
+      <section class="servicesMain">
         <div class="container">
-          <div class="servicesMain__inner">
+          <article class="servicesMain__inner">
             <h2 class="servicesMain__title">Наши услуги</h2>
             <p class="servicesMain__subtitle">Основные направления которыми занимается наша компания</p>
-            <div class="servicesMain__box services">
+            <section class="servicesMain__box services">
               <ul>
                 <li class="services__groupCaption" style="background-image: url(img/icon-23.svg)"><a href="/uslugi/razrabotka_logotipa ">Дизайн</a></li>
                 <li><a href="/uslugi/razrabotka_logotipa ">Разработка логотипа</a></li>
@@ -240,19 +240,19 @@
                 <li><a href="/uslugi/pechat_na_suvenirah ">Печать на сувенирах</a></li>
                 <li><a href="/categorie/ready-offer">Готовые решения</a></li>
               </ul>
-            </div>
-            <div class="servicesMain__form form form--horizontal">
+            </section>
+            <section class="servicesMain__form form form--horizontal">
               <input class="form__field" type="text" placeholder="Имя">
               <input class="form__field" type="text" placeholder="+7 (___) ___-__-__">
               <button class="form__submit btn btn--link btn--invert" type="submit">Заказать звонок</button><span>или</span>
               <button class="form__btn btn btn--invert js-openpopup" data-popup-id="callback" type="button">Заполнить форму заказа</button>
-            </div>
-          </div>
+            </section>
+          </article>
         </div>
-      </div>
-      <div class="portfolioMain">
+      </section>
+      <section class="portfolioMain">
         <div class="container">
-          <div class="portfolioMain__inner">
+          <article class="portfolioMain__inner">
             <h2 class="portfolioMain__title">Портфолио</h2>
             <ul class="portfolioMain__list">
               <li class="portfolioMain__item" data-src="img/portf-1.jpg" style="background-image: url(img/portf-1.jpg)"></li>
@@ -262,9 +262,9 @@
               <li class="portfolioMain__item" data-src="img/portf-2.jpg" style="background-image: url(img/portf-2.jpg)"></li>
               <li class="portfolioMain__item" data-src="img/portf-3.jpg" style="background-image: url(img/portf-3.jpg)"></li>
             </ul>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
       <div class="clientsMain">
         <div class="container">
           <div class="clientsMain__inner">
@@ -281,23 +281,23 @@
           </div>
         </div>
       </div>
-      <div class="orderMain">
+      <section class="orderMain">
         <div class="container">
-          <div class="orderMain__inner">
+          <article class="orderMain__inner">
             <h2 class="orderMain__title">Получите бесплатную консультацию специалиста</h2>
             <p class="orderMain__text">Заполните форму и наш специалист свяжется с Вами и ответит на все интересующие вопросы</p>
-            <div class="orderMain__form form form--horizontal">
+            <section class="orderMain__form form form--horizontal">
               <input class="form__field" type="text" placeholder="Имя">
               <input class="form__field" type="text" placeholder="+7 (___) ___-__-__">
               <button class="form__submit btn" type="submit">Заказать звонок</button>
-            </div>
-          </div>
+            </section>
+          </article>
         </div>
-      </div>
+      </section>
       <section class="advantagesMain">
         <div class="container">
           <div class="advantagesMain__inner">
-            <div class="advantagesMain__top">
+            <article class="advantagesMain__top">
               <h2 class="advantagesMain__title">5 преимуществ делегирования Delonix</h2>
               <ul class="advantagesMain__list">
                 <li class="advantagesMain__item advantagesMain__item--1">Реализация проекта «под ключ» </li>
@@ -306,8 +306,8 @@
                 <li class="advantagesMain__item advantagesMain__item--4">Квалифицированный штат сотрудников</li>
                 <li class="advantagesMain__item advantagesMain__item--5">Креативный подход и идеи</li>
               </ul>
-            </div>
-            <div class="advantagesMain__bottom">
+            </article>
+            <article class="advantagesMain__bottom">
               <h2 class="advantagesMain__title">Обратитесь к нам, если</h2>
               <ul>
                 <li>Вам важно качество продукта;</li>
@@ -317,64 +317,89 @@
                 <li>Ваша цель - сэкономить, не потеряв при этом в качестве.</li>
               </ul>
               <p>Создание рекламных материалов - сложный процесс, который требует огромной базы знаний и опыта. У нас есть и то и другое!</p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
-      <div class="opinionMain">
+      <section class="opinionMain">
         <div class="container">
-          <div class="opinionMain__inner">
+          <article class="opinionMain__inner">
             <h2 class="opinionMain__title">НАШЕ ЭКСПЕРТНОЕ МНЕНИЕ</h2>
             <p class="opinionMain__subtitle">Мы подскажем, как сделать лучше и объясним почему</p>
             <ul class="opinionMain__list">
               <li class="opinionMain__item" style="background-image: url(img/1.jpg)">
                 <div class="opinionMain__info">
-                  <div class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></div><a class="opinionMain__theme" href="">Как правильно экономить на полиграфии</a>
+                  <aside class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></aside><a class="opinionMain__theme" href="">Как правильно экономить на полиграфии</a>
                 </div>
               </li>
               <li class="opinionMain__item" style="background-image: url(img/11.jpg)">
                 <div class="opinionMain__info">
-                  <div class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></div><a class="opinionMain__theme" href="">Стоит ли заказывать буклеты на выставки</a>
+                  <aside class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></aside><a class="opinionMain__theme" href="">Стоит ли заказывать буклеты на выставки</a>
                 </div>
               </li>
               <li class="opinionMain__item" style="background-image: url(img/10.jpg)">
                 <div class="opinionMain__info">
-                  <div class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></div><a class="opinionMain__theme" href="">6 шагов для успешного делегирования</a>
+                  <aside class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></aside><a class="opinionMain__theme" href="">6 шагов для успешного делегирования</a>
                 </div>
               </li>
               <li class="opinionMain__item" style="background-image: url(img/1.jpg)">
                 <div class="opinionMain__info">
-                  <div class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></div><a class="opinionMain__theme" href="">Стоит ли заказывать буклеты на выставки</a>
+                  <aside class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></aside><a class="opinionMain__theme" href="">Стоит ли заказывать буклеты на выставки</a>
                 </div>
               </li>
               <li class="opinionMain__item" style="background-image: url(img/11.jpg)">
                 <div class="opinionMain__info">
-                  <div class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></div><a class="opinionMain__theme" href="">Как правильно экономить на полиграфии</a>
+                  <aside class="opinionMain__tags tags"><a class="tags__item" href="">Реклама</a><a class="tags__item" href="">Лвйфхак</a></aside><a class="opinionMain__theme" href="">Как правильно экономить на полиграфии</a>
                 </div>
               </li>
             </ul>
-          </div>
+          </article>
         </div>
-      </div>
-      <div class="contactsMain">
+      </section>
+      <section class="contactsMain">
         <div class="container">
-          <div class="contactsMain__inner">
+          <article class="contactsMain__inner">
             <h2 class="contactsMain__title">Контакты</h2>
             <p class="contactsMain__subtitle">Мы всегда рады поделиться своим опытом лично. Ниже контакты, по которым вы можете с нами связаться</p>
             <div class="contactsMain__box">
-              <div class="contactsMain__map" id="map" style="width:100%;"></div>
-              <div class="contactsMain__info">
+              <section class="contactsMain__map" id="map" style="width:100%;"></section>
+              <section class="contactsMain__info">
                 <div class="contactsMain__company">
                   <p class="contactsMain__name">ООО «РПК ДЕЛОНИКС»  </p>
                   <p class="contactsMain__address">г. Москва, ул. Смольная, д. 24А, офис 43</p>
                   <p class="contactsMain__hours">пон-пт с 9:00 до 19:00  </p>
                 </div>
                 <div class="contactsMain__contacts"><a class="contactsMain__phone" href="">+7 (499) 450 55 74</a><a class="contactsMain__email" href="">hello@delonix.su</a></div>
-              </div>
+              </section>
             </div>
+          </article>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <section class="footer__links">
+              <ul>
+                <li class="services-trigger"><a href="">Услуги</a></li>
+                <li><a href="">Портфолио</a></li>
+                <li><a href="">О нас</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a href="">Скачать прайс <small class="fileType">.pdf</small></a></li>
+              </ul>
+            </section><a class="footer__sitemap" href="">Карта сайта</a>
+            <section class="footer__contacts">
+              <p>ООО «РПК ДЕЛОНИКС»</p>
+              <p>ул. Смольная, д. 24А, офис 43</p>
+              <p>Пн-Пт с 9:00 до 19:00</p><a href="">hello@delonix.su</a>
+              <p> <a href="">+7 (499) 450 55 74</a>
+                <div class="footer__socials">
+                  <nav class="socials"><a class="socials__item socials__item--instagram" href=""></a><a class="socials__item socials__item--whatsapp" href=""></a><a class="socials__item socials__item--viber" href=""></a></nav>
+                </div>
+              </p>
+            </section><small class="footer__copyright"><span class="footer__name">© Delonix 2016	</span>по всем вопросам работы сайта обращаться <a href="">its@delonix.su</a></small>
           </div>
         </div>
-      </div><br><br><br><br><br><br><br><br><br><br>
+      </footer>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>

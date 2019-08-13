@@ -1,10 +1,10 @@
-.search
+section.search
 	.search__inner
 		p.search__title Поиск
 		button.search__close
 		.search__field
 			input(type="search", placeholder="Искать")
-.mobile
+section.mobile
 	header.mobileHeader
 		.mobileHeader__inner
 			.mobileHeader__socials
@@ -16,7 +16,7 @@
 		a(href="").mobileNav__logo
 			img(src="img/logo.png", alt="")
 		button.mobileNav__burger
-		.mobileNav__menu.mobileMenu
+		section.mobileNav__menu.mobileMenu
 			.mobileMenu__inner
 				p.mobileMenu__title Меню
 				button.mobileMenu__close
@@ -27,7 +27,7 @@
 				a.mobileMenu__email(href="") hello@delonix.su
 				a.mobileMenu__phone(href="") +7 (499) 450-55-74
 				button.mobileMenu__openpopup.js-openpopup(data-popup-id="callback") Заказать звонок
-.header
+header.header
 	.header__main
 		.container
 			.header__inner
@@ -43,9 +43,9 @@
 					nav.header__nav
 						include _menulist
 					button.header__search
-					.header__socials
+					nav.header__socials
 						include _socials
-	.header__services
+	section.header__services
 		.container
 			.services
 				include _serviceslist
