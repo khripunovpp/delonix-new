@@ -91,7 +91,7 @@ select
 
 .popup
 	position: fixed
-	z-index: 4
+	z-index: 5
 	top: 0
 	left: 0
 	width: 100%
@@ -228,7 +228,7 @@ select
 	background-color: transparent
 	border: none
 	position: absolute
-	z-index: 1
+	z-index: 2
 	top: 50%
 	margin-top: -25px
 	cursor: pointer
@@ -255,16 +255,19 @@ select
 
 .ymaps-2-1-74-copyrights-pane
 	display: none !important
-	
-// .fillwidth
-// 	width: 100%
-// 	height: auto
-// 	max-width: none
 
-// .fillheight
-// 	height: 100%
-// 	width: auto
-// 	max-width: none
+.logo
+	svg
+		transition: all .2s
+
+.main
+	position: relative
+	&__order
+		position: absolute
+		display: none
+		top: 0
+		z-index: 1
+		width: 100%
 
 @import "header"
 @import "socials"
@@ -277,6 +280,8 @@ select
 @import "opinionMain"
 @import "contactsMain"
 @import "footer"
+
+@import "hero"
 
 //ALWAYS END
 @import "media"

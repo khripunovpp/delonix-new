@@ -12,9 +12,11 @@ var Util = {
     }
 }
 
+var msnr;
+
 var servicesMenu = function() {
 
-    $('.services').masonry({
+    msnr = $('.services').masonry({
         itemSelector: '.services ul',
         columnWidth: '.services ul'
     });
@@ -83,6 +85,10 @@ var search = function() {
                 left: 0
             })
         }
+    });
+
+    $(window).on('scroll', function(event) {
+        _hide()
     });
 
     function _show() {
@@ -159,6 +165,39 @@ var setImgRatio = function(el) {
     });
 }
 
+var fixedMenu = function() {
+
+    var headerEl = $('.header'),
+        main = $('.main'),
+        lastScrollTop = 0,
+        scrollDirection = '';
+    _setTopOffset()
+    $(window).on('resize', _setTopOffset);
+    $(window).on('scroll', function() {
+        _getScrollDirection()
+        scrollDirection == 'down' ? headerEl.addClass('collapsed') : headerEl.removeClass('collapsed')
+        msnr.masonry('reloadItems')
+    });
+
+
+    function _setTopOffset() {
+        if ($(window).width() > 991) {
+            main.css("margin-top", headerEl.height())
+        } else {
+            main.removeAttr('style')
+        }
+    }
+
+    function _getScrollDirection() {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            scrollDirection = "down"
+        } else {
+            scrollDirection = "up"
+        }
+        lastScrollTop = st;
+    }
+}
 
 
 $(function() {
@@ -233,4 +272,6 @@ $(function() {
     setImgRatio('.portfolioMain__item img')
 
     $("[name=phone]").mask("+7 (999) 999-99-99");
+
+    // fixedMenu()
 });

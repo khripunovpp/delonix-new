@@ -47,26 +47,35 @@
 	.header
 		display: block
 		position: relative
+		transition: all .2s
+		// position: fixed
+		// z-index: 3
+		// left: 0
+		// top: 0
+		// width: 100%
 		&__inner
 			padding-left: 190px
+			transition: all .2s
 		&__main
 			border-bottom: 2px solid $color
 			background-color: #fff
 			position: relative
-			z-index: 3
+			z-index: 4
 		&__top
 			display: flex
 			margin-bottom: 15px
+			transition: all .2s
 		&__bottom
 			display: flex
 			align-items: center
+			transition: all .2s
 		&__services
 			background-color: $color
 			box-shadow: 0 0 0 0 transparent
 			transform: translate3d(0,-100%,0)
 			transition: all .2s
 			position: absolute
-			z-index: 2
+			z-index: 3
 			top: 100%
 			left: 0
 			width: 100%
@@ -84,9 +93,11 @@
 			left: 0
 			top: 10px
 			width: 75px
+			transition: all .2s
 		&__address
 			font-size: 18px
 			font-weight: 100
+			transition: all .2s
 		&__email
 			font-weight: 500
 			color: inherit
@@ -112,6 +123,7 @@
 			display: block
 			color: inherit
 			text-decoration: none
+			transition: all .2s
 			&:hover
 				color: $color
 		&__openpopup
@@ -213,6 +225,42 @@
 				background-image: none !important
 				&:only-child
 					margin-bottom: 0 !important
+		&.collapsed
+			#logo-btm
+				display: none
+			.services
+				padding-left: 90px
+			.header
+				&__address,
+				&__openpopup,
+				&__socials
+					display: none
+				&__inner
+					padding-left: 90px
+					padding-top: 0
+					padding-bottom: 0
+				&__bottom
+					padding-right: 220px
+				&__phone
+					font-size: 22px
+				&__top
+					margin-bottom: 0
+				&__contacts
+					position: absolute
+					top: 50%
+					right: 0
+					transform: translateY(-50%)
+				&__logo
+					width: 55px
+					top: 5px
+				&__nav 
+					li
+						padding: 0
+						&::before
+							margin-top: -4px
+					a
+						padding: 21px 0
+						display: inline-block
 
 	.search
 		max-width: 250px
