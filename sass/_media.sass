@@ -339,12 +339,16 @@
 				flex: 1 0 155px
 
 	.portfolioMain
+		&__title
+			font-size: 50px	
 		&__list
 			padding: 0 20px
 		&__item
 			margin: 0 10px
 
-	.clientsMain 
+	.clientsMain
+		&__title
+			font-size: 50px	
 		&__list
 			padding: 0 20px
 		&__item
@@ -457,13 +461,50 @@
 				left: 0
 				width: 500px
 				height: 293px
+
 	.opinionMain
+		&__title
+			font-size: 50px	
+		&__subtitle
+			font-size: 20px	
 		&__item
 			margin: 0 10px
 		.slick-list
 			overflow: hidden
 			padding-left: 10px
 			padding-right: 10px
+		
+	.contactsMain
+		&__title
+			font-size: 50px	
+		&__subtitle
+			font-size: 20px	
+		&__info
+			position: absolute
+			right: 15px
+			left: 15px
+			bottom: 15px
+			background-color: #fff
+			padding: 15px 50px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			text-align: left
+		&__contacts
+			text-align: right
+		&__name
+			margin: 0
+			font-size: inherit
+		&__company
+			font-size: 20px
+		&__name,
+		&__address,
+		&__hours
+			line-height: 1.2
+		&__map
+			height: 520px
+
+
 
 @media only screen and (min-width : 1160px)
 	.slick-prev

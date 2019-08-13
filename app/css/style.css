@@ -381,6 +381,10 @@ select {
   transform: translateX(-10px) scale(0.85);
 }
 
+.ymaps-2-1-74-copyrights-pane {
+  display: none !important;
+}
+
 .mobileHeader {
   background-color: #e30b13;
   color: #fff;
@@ -1038,6 +1042,7 @@ select {
 
 .opinionMain__list {
   margin: 25px 0 0;
+  z-index: 1;
 }
 
 .opinionMain__item {
@@ -1109,6 +1114,86 @@ select {
 .tags__item:hover {
   background-color: transparent;
   color: #e30b13;
+}
+
+.contactsMain {
+  padding-top: 300px;
+  position: relative;
+  background-color: #fff;
+  margin-top: -260px;
+}
+
+.contactsMain__title, .contactsMain__subtitle {
+  text-align: center;
+}
+
+.contactsMain__title {
+  margin: 0 0 5px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contactsMain__subtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.contactsMain__box {
+  margin: 25px 0 0;
+  position: relative;
+}
+
+.contactsMain__info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contactsMain__company {
+  margin-right: auto;
+}
+
+.contactsMain__name, .contactsMain__address, .contactsMain__hours {
+  margin: 0;
+  line-height: 1;
+}
+
+.contactsMain__phone, .contactsMain__email {
+  display: block;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.contactsMain__phone:hover, .contactsMain__email:hover {
+  color: #e30b13;
+}
+
+.contactsMain__name {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.contactsMain__address {
+  font-weight: 300;
+}
+
+.contactsMain__phone {
+  font-size: 30px;
+  margin: 8px 0 5px;
+}
+
+.contactsMain__hours {
+  font-weight: 300;
+}
+
+.contactsMain__email {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.contactsMain__map {
+  height: 400px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -1570,11 +1655,17 @@ select {
     -ms-flex: 1 0 155px;
     flex: 1 0 155px;
   }
+  .portfolioMain__title {
+    font-size: 50px;
+  }
   .portfolioMain__list {
     padding: 0 20px;
   }
   .portfolioMain__item {
     margin: 0 10px;
+  }
+  .clientsMain__title {
+    font-size: 50px;
   }
   .clientsMain__list {
     padding: 0 20px;
@@ -1717,6 +1808,12 @@ select {
     width: 500px;
     height: 293px;
   }
+  .opinionMain__title {
+    font-size: 50px;
+  }
+  .opinionMain__subtitle {
+    font-size: 20px;
+  }
   .opinionMain__item {
     margin: 0 10px;
   }
@@ -1724,6 +1821,49 @@ select {
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .contactsMain__title {
+    font-size: 50px;
+  }
+  .contactsMain__subtitle {
+    font-size: 20px;
+  }
+  .contactsMain__info {
+    position: absolute;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    background-color: #fff;
+    padding: 15px 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+  }
+  .contactsMain__contacts {
+    text-align: right;
+  }
+  .contactsMain__name {
+    margin: 0;
+    font-size: inherit;
+  }
+  .contactsMain__company {
+    font-size: 20px;
+  }
+  .contactsMain__name, .contactsMain__address, .contactsMain__hours {
+    line-height: 1.2;
+  }
+  .contactsMain__map {
+    height: 520px;
   }
 }
 
