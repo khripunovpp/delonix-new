@@ -1058,14 +1058,12 @@ select {
 
 .orderMain .form__field {
   margin-right: 20px;
-  max-width: 180px;
 }
 
 .orderMain .form__submit {
   padding: 4px 20px;
   margin-top: 10px;
-  max-width: 180px;
-  display: inline-block;
+  max-width: none;
 }
 
 .advantagesMain {
@@ -1877,8 +1875,12 @@ select {
     font-weight: 300;
     display: block;
   }
+  .orderMain .form__submit, .orderMain .form__field {
+    max-width: 180px;
+  }
   .orderMain .form__submit {
     margin-top: 0;
+    display: inline-block;
   }
   .advantagesMain {
     display: block;

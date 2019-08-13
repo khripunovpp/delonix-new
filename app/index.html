@@ -30,7 +30,7 @@
                 <p class="popup__title">Заказать звонок</p>
                 <div class="popup__form form form--popup">
                   <input class="form__field" type="text" placeholder="Имя">
-                  <input class="form__field" type="text" placeholder="+7 (___) ___-__-__">
+                  <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
                   <input class="form__field" type="text" placeholder="E-mail">
                   <textarea class="form__field" placeholder="Ваш заказ" rows="8"></textarea>
                   <div class="form__footer"><small class="form__helper">Важно заполнить все поля.</small>
@@ -243,7 +243,7 @@
             </section>
             <section class="servicesMain__form form form--horizontal">
               <input class="form__field" type="text" placeholder="Имя">
-              <input class="form__field" type="text" placeholder="+7 (___) ___-__-__">
+              <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
               <button class="form__submit btn btn--link btn--invert" type="submit">Заказать звонок</button><span>или</span>
               <button class="form__btn btn btn--invert js-openpopup" data-popup-id="callback" type="button">Заполнить форму заказа</button>
             </section>
@@ -288,7 +288,7 @@
             <p class="orderMain__text">Заполните форму и наш специалист свяжется с Вами и ответит на все интересующие вопросы</p>
             <section class="orderMain__form form">
               <input class="form__field" type="text" placeholder="Имя">
-              <input class="form__field" type="text" placeholder="+7 (___) ___-__-__">
+              <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
               <button class="form__submit btn" type="submit">Заказать звонок</button>
             </section>
           </article>
@@ -401,7 +401,8 @@
         </div>
       </footer>
     </div>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

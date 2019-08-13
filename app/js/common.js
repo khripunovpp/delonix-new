@@ -231,4 +231,6 @@ $(function() {
     })
 
     setImgRatio('.portfolioMain__item img')
+
+    $("[name=phone]").mask("+7 (999) 999-99-99");
 });
