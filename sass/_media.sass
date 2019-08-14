@@ -640,6 +640,11 @@
 		&__copyright
 			margin-top: 20px
 
+	.breadcrumbs
+		&__item
+			&:last-child
+				display: inline-block
+
 	.hero
 		overflow: visible
 		&__container
@@ -652,7 +657,7 @@
 			position: absolute
 			bottom: calc(100% - 20px)
 			right: 15px
-			max-width: 300px
+			max-width: 285px
 			.form
 				&__inner
 					background-color: rgba(#f1f1f1,.6)
@@ -670,14 +675,13 @@
 			display: table
 			table-layout: fixed
 			width: 100%
-			padding-top: 40px
 		&__content,
 		&__sidebar
 			display: table-cell
 			vertical-align: top
 		&__sidebar
-			width: 300px
-			padding-left: 25px
+			width: 315px
+			padding-left: 40px
 			.services
 				ul
 					margin-bottom: 20px
@@ -690,6 +694,39 @@
 						text-decoration: underline
 				&__groupCaption
 					font-weight: 500 !important
+		&__title
+			font-size: 48px
+			line-height: 1.2
+			margin-top: 30px
+			margin-bottom: 15px
+		&__sideTitle
+			font-size: 25px
+			text-transform: uppercase
+			font-weight: 700
+			margin: 50px 0
+			line-height: 1.2
+		&__meta
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+		&__info,
+		&__tags
+			display: inline-block
+			vertical-align: middle
+			order: 1
+		&__tags
+			margin-bottom: 0
+		&__info
+			span
+				display: inline-block
+			span+span
+				margin-left: 8px
+		&--service
+			.main__wrapper
+				margin-top: 40px
+		&--article
+			.content
+				margin-top: 35px
 
 	.slideShow
 		a
@@ -722,7 +759,58 @@
 					padding-right: 20px
 					text-align: center
 
+	.popularArtciles
+		width: auto
+		margin: 60px 0 0
+		&__title
+			font-size: 30px
+			padding: 0
+		&__item
+			display: block
+			padding: 0
+			margin-top: 20px
+		&__meta
+			display: flex
+			justify-content: space-between
+			margin-bottom: 5px
+		&__info
+			margin: 0
+			font-weight: 300
+			span
+				display: inline-block
+			span+span
+				margin-left: 8px
 
+	.sideArtciles
+		&__item
+			margin-bottom: 20px
+		&__theme
+			color: #c9c9c9
+			font-weight: 300
+			line-height: 1.2
+			display: block
+			text-decoration: none
+			strong
+				font-size: 16px
+				color: #000
+				position: relative
+				&::after
+					content: ''
+					width: 4px
+					height: 4px
+					background-color: #000
+					border-radius: 50%
+					display: inline-block
+					position: relative
+					bottom: 3px
+					margin: 0 5px 0 7px
+			&:hover
+				color: #000
+				strong
+					color: $color
+		.tags
+			&__item
+				background-color: #c9c9c9
 
 @media only screen and (min-width : 1160px)
 	.slick-prev

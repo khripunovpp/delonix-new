@@ -259,10 +259,6 @@ select
 .ymaps-2-1-74-copyrights-pane
 	display: none !important
 
-.logo
-	svg
-		transition: all .2s
-
 .main
 	position: relative
 	&__sidebar
@@ -281,14 +277,38 @@ select
 				width: 100%
 				display: block
 				font-size: 18px
+	&__popular
+			margin-top: 60px
+	&__title
+		font-size: 30px
+		margin: 10px 0
+		text-transform: uppercase
+		font-weight: 700
+	&__meta
+		display: flex
+		flex-direction: column
+	&__info
+		margin: 0
+		order: 2
+		span
+			display: block
+	&__tags
+		order: 1
+		margin-bottom: 5px
+	&--article
+		padding-top: 15px
+
+.content
+	margin-top: 25px
 
 .breadcrumbs
-	color: #fff
 	&__item
 		display: inline-block
 		font-size: 14px
 		a:hover
 			text-decoration: none
+		&:last-child
+			display: none
 
 .content
 	&>*:first-child
@@ -334,6 +354,7 @@ select
 
 @import "hero"
 @import "priceList"
+@import "popularArtciles"
 
 //ALWAYS END
 @import "media"

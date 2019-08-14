@@ -23,33 +23,18 @@ html
 		.w-page
 			include _callback
 			include _header
-			article.main.main--service
-				aside.main__hero.hero
-					.hero__slider
-						.hero__slide(style="background-image: url(img/hero1.jpg)")
-						.hero__slide(style="background-image: url(img/hero2.jpg)")
-					.hero__container
-						.hero__info
-							.hero__breadcrumbs
-								include _breadcrumbs
-							h1.hero__title Дизайн брошюр
-						form.hero__form.form.form--service
-								.form__inner
-									input.form__field(type="text", placeholder="Имя")
-									input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
-									input.form__field(type="text", placeholder="E-mail")
-									textarea.form__field(placeholder="Мой заказ", rows="12")
-								button.form__submit.btn.btn--invert.btn--shadow.js-submit Заказать #[span дизайн брошюр]
+			article.main.main--article
 				.container
 					section.main__wrapper
 						.main__content
-							form.main__form.form.form--collapsed
-								.form__inner
-									input.form__field(type="text", placeholder="Имя")
-									input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
-									input.form__field(type="text", placeholder="E-mail")
-									textarea.form__field(placeholder="Мой заказ", rows="12")
-								button.form__submit.btn.btn--invert.btn--shadow.js-openeform Заказать #[span дизайн брошюр]
+							.main__breadcrumbs
+								include _breadcrumbs
+							h1.main__title Как правильно экономить на  полиграфии
+							.main__meta
+								p.main__info #[span Опубликовано: 11.10.2017] #[span Просмотрено: 1429]
+								.main__tags.tags
+									a(href="").tags__item Реклама
+									a(href="").tags__item Лвйфхак
 							.content
 								p С точки зрения маркетинга, идеальная брошюра привлекает, вызывает интерес, побуждает узнать о предложении больше. За реализацию этих пунктов отвечает ее дизайн. Он является отправной точкой и определяет успех всего издания. Если оформление будет посредственным, то его не спасет даже гениальный контент, ведь читатель попросту не доберется до текстовой информации.
 								section.miniGallery
@@ -93,18 +78,58 @@ html
 									a(href="img/portf-3.jpg")
 										img(src="img/portf-3.jpg", alt="")
 								p Они создают креативные иллюстрации, подбирают определенную стилистику, формат, шрифты. Разработка ведется с учетом сроков, предварительно согласованной цены и прочих актуальных моментов.
-							section.order
-								article.order__inner
-									p.order__title Оставьте заявку на услугу
-									p.order__text Заполните форму и наш специалист свяжется с Вами 
-									section.order__form.form
-										input.form__field(type="text", placeholder="Имя")
-										input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
-										button.form__submit.btn(type="submit") Заказать звонок
+							section.main__popular.popularArtciles
+								p.popularArtciles__title Популярные статьи по теме:
+								.popularArtciles__list
+										article.popularArtciles__item
+												.popularArtciles__meta
+													.popularArtciles__tags.tags
+														a(href="").tags__item Реклама
+														a(href="").tags__item Лвйфхак
+													p.popularArtciles__info #[span Опубликовано: 11.10.2017] #[span Просмотрено: 1429]
+												a(href="").popularArtciles__caption Как правильно экономить на полиграфии
+												a(href="").popularArtciles__excerpt Не так важен подарок как внимание Важно ли дарить качественные сувениры? Катастрофически важно. Чрезвычайно. Почему? Да потому что ничто так явно не выражает...
+										article.popularArtciles__item
+												.popularArtciles__meta
+													.popularArtciles__tags.tags
+														a(href="").tags__item Реклама
+														a(href="").tags__item Лвйфхак
+													p.popularArtciles__info #[span Опубликовано: 11.10.2017] #[span Просмотрено: 1429]
+												a(href="").popularArtciles__caption Как правильно экономить на полиграфии
+												a(href="").popularArtciles__excerpt Не так важен подарок как внимание Важно ли дарить качественные сувениры? Катастрофически важно. Чрезвычайно. Почему? Да потому что ничто так явно не выражает...
+										article.popularArtciles__item
+												.popularArtciles__meta
+													.popularArtciles__tags.tags
+														a(href="").tags__item Реклама
+														a(href="").tags__item Лвйфхак
+													p.popularArtciles__info #[span Опубликовано: 11.10.2017] #[span Просмотрено: 1429]
+												a(href="").popularArtciles__caption Как правильно экономить на полиграфии
+												a(href="").popularArtciles__excerpt Не так важен подарок как внимание Важно ли дарить качественные сувениры? Катастрофически важно. Чрезвычайно. Почему? Да потому что ничто так явно не выражает...
 						aside.main__sidebar
-							.services
-								include _serviceslist
-								include _slideShow
+							a.main__back(href="") < Назад
+							p.main__sideTitle Наши статьи
+							section.main__sideArtciles.sideArtciles
+								article.sideArtciles__item
+									a(href="").sideArtciles__theme #[strong Как правильно экономить на полиграфии] Что такое полиграфия? Полиграфия - это отрасль промышленности, занимающаяся изготовлением печатной
+									.sideArtciles__tags.tags
+										a(href="").tags__item Реклама
+										a(href="").tags__item Лвйфхак
+										a(href="").tags__item dvbsd
+								article.sideArtciles__item
+									a(href="").sideArtciles__theme #[strong Стоит ли заказывать буклеты на выставки] Что такое полиграфия? Полиграфия - это отрасль промышленности, занимающаяся изготовлением печатной
+									.sideArtciles__tags.tags
+										a(href="").tags__item Реклама
+										a(href="").tags__item Лвйфхак
+								article.sideArtciles__item
+									a(href="").sideArtciles__theme #[strong RGB, CMYK, пантоны…Что нужно знать при размещении заказа? Часть 2] Что такое полиграфия? Полиграфия - это отрасль промышленности, занимающаяся изготовлением печатной
+									.sideArtciles__tags.tags
+										a(href="").tags__item Лвйфхак
+								article.sideArtciles__item
+									a(href="").sideArtciles__theme #[strong 6 шагов для успешного делегирования] Что такое полиграфия? Полиграфия - это отрасль промышленности, занимающаяся изготовлением печатной
+									.sideArtciles__tags.tags
+										a(href="").tags__item Реклама
+										a(href="").tags__item Лвйфхак
+							include _slideShow
 				include _footer
 
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js")
