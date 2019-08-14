@@ -666,6 +666,8 @@
 		&__info
 			padding: 0
 			left: 15px
+		&__title
+			font-size: 50px
 		&__form
 			display: block
 			position: absolute
@@ -703,6 +705,7 @@
 		&__sidebar
 			width: 315px
 			padding-left: 40px
+			padding-top: 23px
 			.services
 				ul
 					margin-bottom: 20px
@@ -748,6 +751,9 @@
 		&--article
 			.content
 				margin-top: 35px
+		&--portfolio
+			.main__back
+				transform: translateX(-315px)
 
 	.slideShow
 		a
@@ -864,6 +870,22 @@
 			width: calc(25% - 15px)
 			height: 360px
 			margin: 0 15px 15px 0
+		&__meta
+			padding-right: 275px
+		&__disclamer
+			position: absolute
+			display: block
+			bottom: 0
+			right: 0
+			max-width: 275px
+			padding-left: 8px
+			border-left: 1px solid $color
+			font-size: 14px
+			font-weight: 300
+			strong
+				font-weight: 500
+				font-size: 16px
+				display: block
 
 @media only screen and (min-width : 1160px)
 	.slick-prev

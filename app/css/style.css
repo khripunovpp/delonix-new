@@ -466,6 +466,7 @@ select {
   -ms-flex-order: 1;
   order: 1;
   margin-bottom: 5px;
+  margin-left: -2px;
 }
 
 .main--service, .main--index {
@@ -1084,14 +1085,14 @@ select {
 
 .portfolioMain__item {
   font-size: 0;
-  border: 1px solid #9d9d9c;
-  border-radius: 2px;
   height: auto;
   margin: 0 5px;
   opacity: .5;
   -webkit-transition: opacity .1s;
   -o-transition: opacity .1s;
   transition: opacity .1s;
+  border: 1px solid #9d9d9c;
+  border-radius: 3px;
   -webkit-box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
   box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
   position: relative;
@@ -1873,6 +1874,14 @@ select {
 
 .portfolio__more:hover {
   text-decoration: none;
+}
+
+.portfolio__meta {
+  position: relative;
+}
+
+.portfolio__disclamer {
+  display: none;
 }
 
 .filter__but {
@@ -2791,6 +2800,9 @@ select {
     padding: 0;
     left: 15px;
   }
+  .hero__title {
+    font-size: 50px;
+  }
   .hero__form {
     display: block;
     position: absolute;
@@ -2834,6 +2846,7 @@ select {
   .main__sidebar {
     width: 315px;
     padding-left: 40px;
+    padding-top: 23px;
   }
   .main__sidebar .services ul {
     margin-bottom: 20px;
@@ -2901,6 +2914,11 @@ select {
   }
   .main--article .content {
     margin-top: 35px;
+  }
+  .main--portfolio .main__back {
+    -webkit-transform: translateX(-315px);
+    -ms-transform: translateX(-315px);
+    transform: translateX(-315px);
   }
   .slideShow a {
     text-decoration: none;
@@ -3042,6 +3060,25 @@ select {
     width: calc(25% - 15px);
     height: 360px;
     margin: 0 15px 15px 0;
+  }
+  .portfolio__meta {
+    padding-right: 275px;
+  }
+  .portfolio__disclamer {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    max-width: 275px;
+    padding-left: 8px;
+    border-left: 1px solid #e30b13;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .portfolio__disclamer strong {
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
   }
 }
 
