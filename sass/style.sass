@@ -8,6 +8,7 @@ $container: 480px
 
 html
 	box-sizing: border-box
+	height: 100%
 
 *,
 *::after,
@@ -28,6 +29,7 @@ body
 	background-color: #fff
 	text-size-adjust: 100%
 	-webkit-tap-highlight-color: transparent
+	height: 100%
 
 img
 	max-width: 100%	
@@ -87,7 +89,9 @@ select
 
 .w-page
 	position: relative
-	overflow: hidden
+	flex-direction: column
+	display: flex
+	height: 100%
 
 .popup
 	position: fixed
@@ -264,6 +268,7 @@ select
 .main
 	position: relative
 	padding-top: 15px
+	margin-bottom: auto
 	&__sidebar
 		display: none
 	&__content
@@ -385,6 +390,7 @@ select
 @import "popularArtciles"
 @import "reviews"
 @import "portfolio"
+@import "notFound"
 
 //ALWAYS END
 @import "media"

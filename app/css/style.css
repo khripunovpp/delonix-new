@@ -22,6 +22,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -68,6 +69,7 @@ body {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  height: 100%;
 }
 
 img {
@@ -126,7 +128,16 @@ select {
 
 .w-page {
   position: relative;
-  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
 }
 
 .popup {
@@ -392,6 +403,7 @@ select {
 .main {
   position: relative;
   padding-top: 15px;
+  margin-bottom: auto;
 }
 
 .main__sidebar {
@@ -1906,6 +1918,63 @@ select {
   color: #fff;
 }
 
+.notFound {
+  position: relative;
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.notFound__error {
+  color: #c6c6c6;
+  line-height: 1;
+  text-align: center;
+}
+
+.notFound__num {
+  font-size: 165px;
+  font-weight: 700;
+}
+
+.notFound__sign {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.notFound__search {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.notFound__field {
+  width: 100%;
+  border: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.notFound__submit {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-color: #e30b13;
+  color: #fff;
+  padding: 7px 12px;
+  border: none;
+}
+
 @media only screen and (max-width: 991px) {
   .priceList {
     display: block;
@@ -3079,6 +3148,19 @@ select {
     font-weight: 500;
     font-size: 16px;
     display: block;
+  }
+  .notFound__num {
+    font-size: 330px;
+  }
+  .notFound__sign {
+    font-size: 50px;
+  }
+  .notFound__search {
+    top: 150px;
+  }
+  .notFound__submit {
+    padding: 10px 20px;
+    font-size: 17px;
   }
 }
 
