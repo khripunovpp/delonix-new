@@ -266,6 +266,10 @@ select
 	padding-top: 15px
 	&__sidebar
 		display: none
+	&__content
+		position: relative
+	&__back
+		display: none
 	&__form
 		margin-top: -25px
 		margin-bottom: 25px
@@ -303,11 +307,6 @@ select
 	&--index
 		padding-top: 0
 
-.content
-	margin-top: 25px
-	font-size: 15px
-	font-weight: 300
-
 .breadcrumbs
 	&__item
 		display: inline-block
@@ -318,6 +317,9 @@ select
 			display: none
 
 .content
+	margin-top: 25px
+	font-size: 15px
+	font-weight: 300
 	&>*:first-child
 		margin-top: 0
 	ul
