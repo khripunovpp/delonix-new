@@ -2922,6 +2922,27 @@ select {
   .sideArtciles .tags__item:hover {
     background-color: transparent;
   }
+  .reviews {
+    width: auto;
+    margin: 60px 0 0;
+    position: relative;
+  }
+  .reviews__title {
+    font-size: 30px;
+    padding: 0 170px 0 0;
+  }
+  .reviews__addnew {
+    padding: 0;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    font-size: 20px;
+    margin: 0;
+  }
+  .reviews__item {
+    padding: 15px 0 0;
+    margin: 20px 0 50px;
+  }
 }
 
 @media only screen and (min-width: 1160px) {
