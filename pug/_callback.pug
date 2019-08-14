@@ -13,3 +13,20 @@ aside.popup.popup--callback#callback
 						.form__footer
 							small.form__helper Важно заполнить все поля.
 							button.form__submit.btn Отправить
+
+aside.popup.popup--review#review
+	table.popup__wrapper
+		tr
+			td.popup__container
+				.popup__inner
+					button.popup__close
+					p.popup__title Оставить отзыв
+					.popup__form.form.form--popup
+						input.form__field(type="text", placeholder="Имя")
+						input.form__field(type="text", placeholder="E-mail")
+						input.form__field(type="text", placeholder="Компания")
+						input.form__field(type="text", placeholder="Должность")
+						textarea.form__field(placeholder="Текст отзыва", rows=8)
+						.form__footer
+							small.form__helper Для отправки отзыва Важно заполнить все поля.
+							button.form__submit.btn Отправить

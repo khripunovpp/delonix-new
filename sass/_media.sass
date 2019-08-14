@@ -293,6 +293,20 @@
 			margin-bottom: 15px
 		&__close
 			top: 25px
+		&--review
+			.form
+				flex-wrap: wrap
+				flex-direction: row
+				&__footer
+					flex-direction: row
+					width: 100%
+					justify-content: space-between
+					align-items: center
+				&__submit
+					margin: 0 0 0 auto !important
+					max-width: 200px
+			input.form__field
+				max-width: calc(50% - 10px)
 
 	.form
 		&__field
@@ -696,7 +710,7 @@
 					font-weight: 500 !important
 		&__title
 			font-size: 48px
-			line-height: 1.2
+			line-height: 1.33
 			margin-top: 30px
 			margin-bottom: 15px
 		&__sideTitle
@@ -748,6 +762,7 @@
 				&:last-child
 					padding-right: 20px
 					text-align: center
+					white-space: nowrap
 		tbody
 			td
 				padding-top: 5px
@@ -758,6 +773,7 @@
 				&:last-child
 					padding-right: 20px
 					text-align: center
+					white-space: nowrap
 
 	.popularArtciles
 		width: auto
@@ -808,9 +824,13 @@
 				color: #000
 				strong
 					color: $color
+		&__tags
+			margin-left: -2px
 		.tags
 			&__item
 				background-color: #c9c9c9
+				&:hover
+					background-color: transparent
 
 @media only screen and (min-width : 1160px)
 	.slick-prev

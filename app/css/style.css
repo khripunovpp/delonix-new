@@ -153,7 +153,7 @@ select {
 
 .popup__inner {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
   background-color: #fff;
   padding: 15px;
   position: relative;
@@ -391,6 +391,7 @@ select {
 
 .main {
   position: relative;
+  padding-top: 15px;
 }
 
 .main__sidebar {
@@ -416,7 +417,7 @@ select {
   font-size: 18px;
 }
 
-.main__popular {
+.main__popular, .main__reviews {
   margin-top: 60px;
 }
 
@@ -459,12 +460,14 @@ select {
   margin-bottom: 5px;
 }
 
-.main--article {
-  padding-top: 15px;
+.main--service, .main--index {
+  padding-top: 0;
 }
 
 .content {
   margin-top: 25px;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .breadcrumbs__item {
@@ -517,6 +520,26 @@ select {
 
 .miniGallery .slick-dots li.slick-active button {
   opacity: 1;
+}
+
+.requisites__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #eeeeee;
+  margin-top: 40px;
+}
+
+.requisites__table td {
+  border: 1px solid #bbb;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.requisites__disclamer {
+  margin: 15px 0 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .mobile {
@@ -1538,6 +1561,15 @@ select {
 
 .hero__slider {
   position: relative;
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hero__slider.slick-initialized {
+  height: auto;
+  overflow: visible;
+  visibility: visible;
 }
 
 .hero__slider::after {
@@ -1688,12 +1720,100 @@ select {
   margin-top: 12px;
 }
 
+.popularArtciles__tags {
+  margin-left: -2px;
+}
+
 .popularArtciles__info {
   margin: 8px 0 0;
 }
 
 .popularArtciles__info span {
   display: block;
+}
+
+.reviews {
+  width: -webkit-calc(100% + 30px);
+  width: calc(100% + 30px);
+  margin-left: -15px;
+}
+
+.reviews__title {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 15px;
+  font-weight: 300;
+}
+
+.reviews__item {
+  padding: 15px 15px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.reviews__company {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.reviews__name {
+  margin: 0 0 5px;
+}
+
+.reviews__name, .reviews__text {
+  font-weight: 300;
+}
+
+.reviews__text p {
+  margin: 0;
+}
+
+.reviews__text p + p {
+  margin-top: 5px;
+}
+
+.reviews__date {
+  margin: 10px 0 0;
+  font-weight: 300;
+}
+
+.reviews__addnew, .reviews__more {
+  display: block;
+  padding: 0;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.reviews__addnew:hover, .reviews__more:hover {
+  text-decoration: none;
+}
+
+.reviews__addnew {
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.reviews__more {
+  margin: 20px auto 0;
+}
+
+.reviews__hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 991px) {
@@ -2089,6 +2209,40 @@ select {
   }
   .popup__close {
     top: 25px;
+  }
+  .popup--review .form {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .popup--review .form__footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .popup--review .form__submit {
+    margin: 0 0 0 auto !important;
+    max-width: 200px;
+  }
+  .popup--review input.form__field {
+    max-width: -webkit-calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
   .form__field {
     font-size: 17px;
@@ -2608,7 +2762,7 @@ select {
   }
   .main__title {
     font-size: 48px;
-    line-height: 1.2;
+    line-height: 1.33;
     margin-top: 30px;
     margin-bottom: 15px;
   }
@@ -2678,6 +2832,7 @@ select {
   .priceList thead td:last-child, .priceList thead th:last-child {
     padding-right: 20px;
     text-align: center;
+    white-space: nowrap;
   }
   .priceList tbody td {
     padding-top: 5px;
@@ -2690,6 +2845,7 @@ select {
   .priceList tbody td:last-child {
     padding-right: 20px;
     text-align: center;
+    white-space: nowrap;
   }
   .popularArtciles {
     width: auto;
@@ -2757,8 +2913,14 @@ select {
   .sideArtciles__theme:hover strong {
     color: #e30b13;
   }
+  .sideArtciles__tags {
+    margin-left: -2px;
+  }
   .sideArtciles .tags__item {
     background-color: #c9c9c9;
+  }
+  .sideArtciles .tags__item:hover {
+    background-color: transparent;
   }
 }
 

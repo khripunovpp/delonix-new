@@ -107,7 +107,7 @@ select
 		padding: 10px
 	&__inner
 		margin: 0 auto
-		max-width: 600px
+		max-width: 800px
 		background-color: #fff
 		padding: 15px
 		position: relative
@@ -133,6 +133,8 @@ select
 			content: '\e910'
 	&--callback .popup__inner
 		max-width: 350px
+
+
 
 .form
 	&__field
@@ -261,6 +263,7 @@ select
 
 .main
 	position: relative
+	padding-top: 15px
 	&__sidebar
 		display: none
 	&__form
@@ -277,7 +280,8 @@ select
 				width: 100%
 				display: block
 				font-size: 18px
-	&__popular
+	&__popular,
+	&__reviews
 			margin-top: 60px
 	&__title
 		font-size: 30px
@@ -295,11 +299,14 @@ select
 	&__tags
 		order: 1
 		margin-bottom: 5px
-	&--article
-		padding-top: 15px
+	&--service,
+	&--index
+		padding-top: 0
 
 .content
 	margin-top: 25px
+	font-size: 15px
+	font-weight: 300
 
 .breadcrumbs
 	&__item
@@ -340,6 +347,24 @@ select
 				button
 					opacity: 1
 
+.requisites
+	&__table
+		width: 100%
+		border-collapse: collapse
+		background-color: #eeeeee
+		margin-top: 40px
+		td
+			border: 1px solid #bbb
+			padding: 15px
+			font-size: 16px
+	&__disclamer
+		margin: 15px 0 0
+		text-transform: uppercase
+		font-size: 16px
+		font-weight: 300
+
+
+
 @import "header"
 @import "socials"
 @import "slider"
@@ -355,6 +380,7 @@ select
 @import "hero"
 @import "priceList"
 @import "popularArtciles"
+@import "reviews"
 
 //ALWAYS END
 @import "media"

@@ -205,6 +205,18 @@ var closedForms = function() {
     });
 }
 
+var reviews = function() {
+    var reviewsList = $('.reviews__list'),
+        hiddens;
+
+    $('.reviews__more').on('click', function(event) {
+        event.preventDefault();
+        hiddens = $('.reviews__hidden').children()
+        reviewsList.append(hiddens.last())
+        if (hiddens.length == 1) $(this).remove()
+    });
+}
+
 
 $(function() {
     servicesMenu()
@@ -322,4 +334,6 @@ $(function() {
     closedForms()
 
     // fixedMenu()
+
+    reviews()
 });

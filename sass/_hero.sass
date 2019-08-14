@@ -12,6 +12,13 @@
 		padding: 20px
 	&__slider
 		position: relative
+		visibility: hidden
+		height: 1px
+		overflow: hidden
+		&.slick-initialized
+			height: auto
+			overflow: visible
+			visibility: visible
 		&::after
 			content: ''
 			position: absolute
