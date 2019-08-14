@@ -12,11 +12,9 @@ var Util = {
     }
 }
 
-var msnr;
-
 var servicesMenu = function() {
 
-    msnr = $('.services').masonry({
+    $('.header .services, .servicesMain .services').masonry({
         itemSelector: '.services ul',
         columnWidth: '.services ul'
     });
@@ -199,6 +197,14 @@ var fixedMenu = function() {
     }
 }
 
+var closedForms = function() {
+    $('.js-openeform').on('click', function(event) {
+        event.preventDefault();
+        $(this).closest('.form').find('.form__inner').slideToggle()
+        $(this).removeClass('js-openeform').addClass('js-submit')
+    });
+}
+
 
 $(function() {
     servicesMenu()
@@ -272,6 +278,48 @@ $(function() {
     setImgRatio('.portfolioMain__item img')
 
     $("[name=phone]").mask("+7 (999) 999-99-99");
+
+    $('.miniGallery').lightGallery()
+
+    $('.miniGallery').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: false,
+        dots: true,
+        infinite: false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    })
+
+    $('.slideShow').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false
+    })
+
+    $('.hero__slider').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+        fade: true,
+        cssEase: 'linear'
+    })
+
+    closedForms()
 
     // fixedMenu()
 });

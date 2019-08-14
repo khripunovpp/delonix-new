@@ -91,7 +91,7 @@ select
 
 .popup
 	position: fixed
-	z-index: 5
+	z-index: 6
 	top: 0
 	left: 0
 	width: 100%
@@ -170,6 +170,9 @@ select
 	&--horizontal
 		.form__field
 			margin-bottom: 10px
+	&--collapsed
+		.form__inner
+			display: none
 
 
 .btn
@@ -197,7 +200,7 @@ select
 			box-shadow: 10px 10px 8px transparent
 	&--invert
 		color: #fff
-		border-color: #fff
+		border-color: $color
 		&:hover
 			color: $color
 			background-color: #fff
@@ -262,12 +265,60 @@ select
 
 .main
 	position: relative
-	&__order
-		position: absolute
+	&__sidebar
 		display: none
-		top: 0
+	&__form
+		margin-top: -25px
+		margin-bottom: 25px
+		position: relative
 		z-index: 1
-		width: 100%
+		.form
+			&__inner
+				background-color: rgba(#f1f1f1,.6)
+				padding: 15px 15px 0
+			&__submit
+				max-width: none
+				width: 100%
+				display: block
+				font-size: 18px
+
+.breadcrumbs
+	color: #fff
+	&__item
+		display: inline-block
+		font-size: 14px
+		a:hover
+			text-decoration: none
+
+.content
+	&>*:first-child
+		margin-top: 0
+	ul
+		list-style-type: disc
+		list-style-position: inside
+
+.miniGallery
+	a
+		margin: 0 10px
+	.slick-dots
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: middle
+			margin: 0 5px
+			button
+				display: inline-block
+				background-color: $color
+				opacity: .4
+				padding: 0
+				width: 15px
+				height: 15px
+				font-size: 0
+				border: none
+				cursor: pointer
+			&.slick-active
+				button
+					opacity: 1
 
 @import "header"
 @import "socials"

@@ -1,13 +1,37 @@
 .hero
 	position: relative
 	overflow: hidden
+	&__container
+		@extend %container
+		position: relative
 	&__info
 		position: absolute
-		z-index: 1
-		bottom: 15px
+		bottom: 20px
 		left: 0
 		width: 100%
+		padding: 20px
+	&__slider
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: linear-gradient(to bottom, transparent, #000)
+			opacity: .5
 	&__slide
 		background-size: cover
 		background-position: 50% 50%
 		height: 450px
+	&__breadcrumbs
+		margin-bottom: 10px
+	&__title
+		margin: 0
+		font-size: 30px
+		text-transform: uppercase
+		line-height: 1.2
+		color: #fff
+	&__form
+		display: none

@@ -60,7 +60,7 @@
 			border-bottom: 2px solid $color
 			background-color: #fff
 			position: relative
-			z-index: 4
+			z-index: 5
 		&__top
 			display: flex
 			margin-bottom: 15px
@@ -75,7 +75,7 @@
 			transform: translate3d(0,-100%,0)
 			transition: all .2s
 			position: absolute
-			z-index: 3
+			z-index: 4
 			top: 100%
 			left: 0
 			width: 100%
@@ -605,6 +605,64 @@
 		&__copyright
 			margin-top: 20px
 
+	.hero
+		overflow: visible
+		&__container
+			max-width: $container
+		&__info
+			padding: 0
+			left: 15px
+		&__form
+			display: block
+			position: absolute
+			bottom: calc(100% - 20px)
+			right: 15px
+			max-width: 300px
+			.form
+				&__inner
+					background-color: rgba(#f1f1f1,.6)
+					padding: 15px 15px 0
+				&__submit
+					max-width: none
+					width: 100%
+					display: block
+					font-size: 18px
+
+	.main
+		&__form
+			display: none
+		&__wrapper
+			display: table
+			table-layout: fixed
+			width: 100%
+			padding-top: 40px
+		&__content,
+		&__sidebar
+			display: table-cell
+			vertical-align: top
+		&__sidebar
+			width: 300px
+			padding-left: 25px
+			.services
+				ul
+					margin-bottom: 20px
+				li
+					font-size: 17px
+					font-weight: 300
+				a
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+				&__groupCaption
+					font-weight: 500 !important
+
+	.slideShow
+		a
+			text-decoration: none
+			background-size: cover
+			background-position: 50% 50%
+			display: block
+			height: 450px
 
 
 @media only screen and (min-width : 1160px)
