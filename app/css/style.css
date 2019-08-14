@@ -1826,6 +1826,11 @@ select {
   font-size: 0;
   height: 180px;
   margin: 0 8px 8px 0;
+  border: 1px solid #9d9d9c;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
+  box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
+  overflow: hidden;
 }
 
 .portfolio__item img {
@@ -1833,6 +1838,18 @@ select {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.portfolio__item:hover img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .portfolio__more {
