@@ -60,6 +60,18 @@ html
 									a(href="img/portf-3.jpg")
 										img(src="img/portf-3.jpg", alt="")
 								p Для создания эффективного дизайна брошюр необходим и творческий, и аналитический подход. При этом весь процесс делится на несколько ключевых этапов.
+								table.priceList
+									thead
+										tr
+											th Наименование услуги
+											th Стоимость
+									tbody
+										tr
+											td Дизайн брошюр
+											td от #[strong 1000 &#8381;]
+										tr
+											td Подарочный набор «Bari»
+											td #[strong 3 054 &#8381;]
 								p Получение основной информации от клиента: 
 								ul
 									li целевая аудитория и ее предпочтения;
@@ -81,11 +93,11 @@ html
 									a(href="img/portf-3.jpg")
 										img(src="img/portf-3.jpg", alt="")
 								p Они создают креативные иллюстрации, подбирают определенную стилистику, формат, шрифты. Разработка ведется с учетом сроков, предварительно согласованной цены и прочих актуальных моментов.
-								section.orderMain
-									article.orderMain__inner
-										h2.orderMain__title Получите бесплатную консультацию специалиста
-										p.orderMain__text Заполните форму и наш специалист свяжется с Вами и ответит на все интересующие вопросы
-										section.orderMain__form.form
+								section.order
+									article.order__inner
+										h2.order__title Оставьте заявку на услугу
+										p.order__text Заполните форму и наш специалист свяжется с Вами 
+										section.order__form.form
 											input.form__field(type="text", placeholder="Имя")
 											input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
 											button.form__submit.btn(type="submit") Заказать звонок

@@ -1105,13 +1105,15 @@ select {
   margin: 0 5px;
 }
 
-.orderMain {
+.orderMain,
+.order {
   margin-top: 297px;
   position: relative;
   z-index: 2;
 }
 
-.orderMain__inner {
+.orderMain__inner,
+.order__inner {
   padding-top: 100px;
   background-color: #f1f1f1;
   padding: 25px;
@@ -1120,7 +1122,8 @@ select {
   position: relative;
 }
 
-.orderMain__inner::before {
+.orderMain__inner::before,
+.order__inner::before {
   content: '';
   background-image: url(../img/order-man.png);
   background-size: cover;
@@ -1132,26 +1135,31 @@ select {
   margin-left: -100px;
 }
 
-.orderMain__title {
+.orderMain__title,
+.order__title {
   text-align: center;
   margin: 0 0 10px;
   font-size: 18px;
   font-weight: 300;
 }
 
-.orderMain__text {
+.orderMain__text,
+.order__text {
   display: none;
 }
 
-.orderMain__form {
+.orderMain__form,
+.order__form {
   margin-top: 15px;
 }
 
-.orderMain .form__field {
+.orderMain .form__field,
+.order .form__field {
   margin-right: 20px;
 }
 
-.orderMain .form__submit {
+.orderMain .form__submit,
+.order .form__submit {
   padding: 4px 20px;
   margin-top: 10px;
   max-width: none;
@@ -1518,7 +1526,59 @@ select {
   display: none;
 }
 
+.priceList {
+  width: -webkit-calc(100% + 30px);
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  background-color: #e30b13;
+  color: #fff;
+  border-collapse: collapse;
+}
+
+.priceList thead {
+  padding: 5px 15px;
+}
+
+.priceList thead td, .priceList thead th {
+  font-weight: 100;
+  font-size: 14px;
+  text-align: left;
+}
+
+.priceList thead td:last-child, .priceList thead th:last-child {
+  width: 20%;
+}
+
+.priceList tbody tr {
+  padding: 5px 15px;
+}
+
+.priceList tbody td {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.priceList tbody td strong {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.priceList tbody td:first-child {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 991px) {
+  .priceList {
+    display: block;
+  }
+  .priceList thead,
+  .priceList tbody,
+  .priceList tr,
+  .priceList td,
+  .priceList th {
+    display: block;
+  }
   .slick-arrow {
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -2096,6 +2156,38 @@ select {
     margin-top: 0;
     display: inline-block;
   }
+  .order {
+    margin-top: 130px;
+  }
+  .order__inner {
+    padding: 20px;
+    padding-left: 220px;
+  }
+  .order__inner::before {
+    left: 110px;
+    bottom: 0;
+    top: auto;
+  }
+  .order__title {
+    text-align: left;
+    margin: 0 0 5px;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .order__text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+  }
+  .order .form__field {
+    max-width: 170px;
+  }
+  .order .form__submit {
+    margin-top: 0;
+    display: inline-block;
+    max-width: 180px;
+  }
   .advantagesMain {
     display: block;
     padding-top: 50px;
@@ -2390,6 +2482,33 @@ select {
     background-position: 50% 50%;
     display: block;
     height: 450px;
+  }
+  .priceList {
+    width: 100%;
+    margin: 0;
+  }
+  .priceList thead td, .priceList thead th {
+    text-align: left;
+    padding-top: 5px;
+  }
+  .priceList thead td:first-child, .priceList thead th:first-child {
+    padding-left: 20px;
+  }
+  .priceList thead td:last-child, .priceList thead th:last-child {
+    padding-right: 20px;
+    text-align: center;
+  }
+  .priceList tbody td {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .priceList tbody td:first-child {
+    padding-left: 20px;
+  }
+  .priceList tbody td:last-child {
+    padding-right: 20px;
+    text-align: center;
   }
 }
 

@@ -1,6 +1,14 @@
 @import "bourbon"
 
 @media only screen and (max-width : 991px)
+	.priceList
+		display: block
+		thead,
+		tbody,
+		tr,
+		td,
+		th
+			display: block
 	.slick-arrow
 		background-color: rgba(255,255,255,.5)
 	.slider	
@@ -432,6 +440,33 @@
 				margin-top: 0
 				display: inline-block
 
+	.order
+		margin-top: 130px
+		&__inner
+			padding: 20px
+			padding-left: 220px
+			&::before
+				left: 110px
+				bottom: 0
+				top: auto
+		&__title
+			text-align: left
+			margin: 0 0 5px
+			font-size: 30px
+			font-weight: 300
+		&__text
+			margin: 0
+			font-size: 16px
+			font-weight: 300
+			display: block
+		.form
+			&__field
+				max-width: 170px
+			&__submit
+				margin-top: 0
+				display: inline-block
+				max-width: 180px
+
 	.advantagesMain
 		display: block
 		padding-top: 50px
@@ -663,6 +698,30 @@
 			background-position: 50% 50%
 			display: block
 			height: 450px
+
+	.priceList
+		width: 100%
+		margin: 0
+		thead
+			td, th
+				text-align: left
+				padding-top: 5px
+				&:first-child
+					padding-left: 20px
+				&:last-child
+					padding-right: 20px
+					text-align: center
+		tbody
+			td
+				padding-top: 5px
+				padding-left: 15px
+				padding-right: 15px
+				&:first-child
+					padding-left: 20px
+				&:last-child
+					padding-right: 20px
+					text-align: center
+
 
 
 @media only screen and (min-width : 1160px)
