@@ -1397,6 +1397,7 @@ select {
   margin-bottom: 5px;
   margin-left: -2px;
   margin-right: -2px;
+  display: block;
 }
 
 .opinionMain__theme {
@@ -1405,6 +1406,7 @@ select {
   font-weight: 500;
   margin: 0;
   text-decoration: none;
+  display: block;
 }
 
 .opinionMain__theme:hover {
