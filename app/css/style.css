@@ -335,6 +335,7 @@ select {
 
 .services li {
   position: relative;
+  list-style-type: none;
 }
 
 .services li sup {
@@ -2047,6 +2048,60 @@ select {
   margin: 0 0 15px;
 }
 
+.servicesPage .services {
+  text-align: center;
+}
+
+.servicesPage .services ul {
+  margin-bottom: 35px;
+}
+
+.servicesPage .services li {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.servicesPage .services a {
+  text-decoration: none;
+}
+
+.servicesPage .services a:hover {
+  text-decoration: underline;
+}
+
+.servicesPage .services__groupCaption {
+  padding-top: 55px;
+  background-position: 50% 0;
+  background-size: 58px;
+  font-size: 25px !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px;
+}
+
+.servicesPage__list {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.servicesPage__footer {
+  margin-top: 15px;
+}
+
+.servicesPage__text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0 0 8px;
+}
+
+.servicesPage .form {
+  max-width: 250px;
+  margin: 20px auto 0;
+}
+
+.servicesPage .form__field {
+  border: 1px solid #f1f1f1;
+}
+
 @media only screen and (max-width: 991px) {
   .priceList {
     display: block;
@@ -2074,6 +2129,14 @@ select {
     height: auto !important;
   }
   .servicesMain .services ul {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+  }
+  .servicesPage .services ul {
     position: relative !important;
     left: auto !important;
     top: auto !important;
@@ -2117,6 +2180,11 @@ select {
     -webkit-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
   .header__inner {
     padding-left: 190px;
@@ -2710,18 +2778,16 @@ select {
     font-weight: 300;
     position: relative;
     z-index: 1;
-    overflow: hidden;
   }
   .advantagesMain::before {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 0;
     -webkit-clip-path: polygon(52% 0, 0% 100%, 100% 100%);
     clip-path: polygon(52% 0, 0% 100%, 100% 100%);
     height: 90px;
-    width: 2000px;
+    width: 100%;
     top: -89px;
-    margin-left: -1000px;
     background-color: #e30b13;
   }
   .advantagesMain__title {
@@ -2826,19 +2892,17 @@ select {
     position: relative;
     padding-top: 300px;
     margin-top: -240px;
-    overflow: hidden;
   }
   .contactsMain::before {
     content: '';
     position: absolute;
     z-index: 1;
-    left: 50%;
+    left: 0;
     -webkit-clip-path: polygon(52% 0, 0% 100%, 100% 100%);
     clip-path: polygon(52% 0, 0% 100%, 100% 100%);
     height: 90px;
-    width: 2000px;
+    width: 100%;
     top: -89px;
-    margin-left: -1000px;
     background-color: #fff;
   }
   .contactsMain__title {
@@ -3006,6 +3070,7 @@ select {
   }
   .main__sidebar .services__groupCaption {
     font-weight: 500 !important;
+    background-image: none !important;
   }
   .main__title {
     font-size: 48px;
@@ -3062,6 +3127,9 @@ select {
     -webkit-transform: translateX(-315px);
     -ms-transform: translateX(-315px);
     transform: translateX(-315px);
+  }
+  .main--services .main__sidebar {
+    padding-top: 65px;
   }
   .slideShow a {
     text-decoration: none;
@@ -3290,6 +3358,34 @@ select {
     width: calc(100% + 60px);
     margin-left: -30px;
     margin-top: 30px;
+  }
+  .servicesPage .services {
+    text-align: left;
+  }
+  .servicesPage .services ul {
+    width: 29%;
+    margin: 0 25px 25px 0;
+  }
+  .servicesPage .services__groupCaption {
+    background-position: 0 0;
+    background-size: 47px;
+    padding-top: 50px;
+  }
+  .servicesPage__text {
+    text-align: left;
+  }
+  .servicesPage .form {
+    margin: 0;
+    width: 100%;
+    margin-top: 15px;
+    max-width: none;
+  }
+  .servicesPage .form__field {
+    margin-right: 20px;
+  }
+  .servicesPage .form__submit {
+    max-width: none;
+    padding: 5px 20px;
   }
 }
 

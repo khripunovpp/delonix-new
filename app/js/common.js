@@ -60,9 +60,11 @@ var Util = {
     }
 }
 
+var msnr;
+
 var servicesMenu = function() {
 
-    $('.header .services, .servicesMain .services').masonry({
+    msnr = $('.header .services, .servicesMain .services, .servicesPage .services').masonry({
         itemSelector: '.services ul',
         columnWidth: '.services ul'
     });
@@ -222,7 +224,7 @@ var fixedMenu = function() {
     $(window).on('scroll', function() {
         _getScrollDirection()
         scrollDirection == 'down' ? headerEl.addClass('collapsed') : headerEl.removeClass('collapsed')
-        msnr.masonry('reloadItems')
+        msnr.masonry('layout')
     });
 
 
@@ -381,7 +383,7 @@ $(function() {
 
     closedForms()
 
-    // fixedMenu()
+    fixedMenu()
 
     reviews()
 });

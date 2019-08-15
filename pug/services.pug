@@ -1,0 +1,55 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title Креативное агентство Delonix в Москве | Услуги студии дизайна упаковки
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon.png', type='image/x-icon')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800,900")
+		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/src/css/lightgallery.css")
+		link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+		link(rel='stylesheet', href='css/style.css', id="mainstyle")
+		style.
+			*,
+			*::after,
+			*::before {
+				//- outline: 1px solid rgba(255,0,0,.5) !important
+			}
+		script(src="https://ctr-localhost.ru/vlad/jq.js")
+
+	body
+		.w-page
+			include _callback
+			include _header
+			article.main.main--services
+				.container
+					section.main__wrapper
+						.main__content
+							a.main__back(href="") < Назад
+							.main__breadcrumbs
+								include _breadcrumbs
+							h1.main__title О нас
+							.content
+								.servicesPage
+									.servicesPage__list
+										.services
+											include _serviceslist
+									.servicesPage__footer
+										p.servicesPage__text Основные направления которыми занимается наша компания.
+										p.servicesPage__text Вы можете оставить заявку и наш специалист в кратчайшие сроки свяжется с Вами
+										.servicesPage__form.form.form--horizontal
+											input.form__field(type="text", placeholder="Имя")
+											input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
+											button.form__submit.btn(type="submit") Заказать звонок
+						aside.main__sidebar
+							include _slideShow
+			include _footer
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js")
+		script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js")
+		script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/jquery-sticky-kit@1.1.3/dist/sticky-kit.min.js")
+		script(src="js/common.js")
