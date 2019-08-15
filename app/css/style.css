@@ -2479,6 +2479,9 @@ select {
     padding: 21px 0;
     display: inline-block;
   }
+  .header.collapsed .header__search::after {
+    margin-top: 16px;
+  }
   .search {
     max-width: 250px;
     padding: 2px;

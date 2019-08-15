@@ -157,8 +157,9 @@ var search = function() {
     }
 
     function _fixCords(cords) {
+        console.log(cords)
         return {
-            top: cords.top + $(target).outerHeight() + 14,
+            top: $('.header').outerHeight(),
             left: cords.left - searchComponent.outerWidth() + $(target).outerWidth()
         };
     }
@@ -167,8 +168,8 @@ var search = function() {
         var box = elem.getBoundingClientRect();
 
         return {
-            top: box.top + pageYOffset,
-            left: box.left + pageXOffset
+            top: box.top,
+            left: box.left
         };
     }
 }
