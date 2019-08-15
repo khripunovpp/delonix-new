@@ -263,7 +263,6 @@ $(document).on('ready', function() {
         dots: true
     })
 
-    $('.portfolioMain__list').lightGallery({ selector: '.portfolioMain__item' })
 
     $('.portfolioMain__list').slick({
         slidesToShow: 4,
@@ -317,7 +316,6 @@ $(document).on('ready', function() {
         ]
     })
 
-    $('.miniGallery').lightGallery()
 
     $('.miniGallery').slick({
         slidesToShow: 2,
@@ -356,6 +354,11 @@ $(document).on('ready', function() {
         fade: true,
         cssEase: 'linear'
     })
+
+    
+    $('.portfolioMain__list').lightGallery({ selector: '.portfolioMain__item' })
+    $('.miniGallery').lightGallery()
+
 });
 
 

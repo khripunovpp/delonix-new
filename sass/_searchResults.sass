@@ -1,0 +1,81 @@
+.searchResults
+	#ya-site-results
+		.b-head
+			display: none
+		.b-serp-list
+			margin-top: 30px
+			display: block
+		.b-serp-item
+			padding-bottom: 15px
+			margin-bottom: 30px
+			display: block
+			position: relative
+			padding-left: 25px
+			border-bottom: 1px solid #dfdfdf
+			.b-serp-item__number
+				display: block
+				position: absolute
+				top: 2px
+				left: 0
+				font-weight: 300
+			.b-serp-item__title
+				display: block
+				font-size: 18px
+				font-weight: 500
+				margin-bottom: 5px
+				a
+					text-decoration: none
+					&:hover
+						text-decoration: underline
+						color: $color
+			.b-serp-item__text
+				display: block
+				margin-bottom: 10px
+			.b-serp-item__links
+				color: $color
+				display: block
+			.b-serp-item__links-link
+				display: none
+		.b-serp-url__item
+			display: none
+		.b-pager__arrow,
+		.b-pager__title
+			display: none
+		.b-pager__pages
+			display: block
+			margin-bottom: 10px
+			text-align: center
+			b,
+			a
+				display: inline-block
+				padding: 1px 2px
+				margin: 0 5px 0 0
+				font-weight: 300
+			a
+				text-decoration: none
+				&:hover
+					color: $color
+		.b-pager__current
+			border: 1px solid
+		.b-pager__sorted
+			display: block
+			text-align: center
+			.b-pager__select
+				padding: 1px 6px
+				display: inline-block
+				border: 1px solid
+				font-weight: 300
+				margin: 0 8px
+			.b-link
+				text-decoration: none
+				display: inline-block
+				margin: 0 8px
+				&:hover
+					color: $color
+	&__field
+		input[type="search"]
+			width: 100%
+			padding: 5px 15px
+			font-size: 16px
+			font-weight: 300
+			border: 1px solid #c1c4c8
