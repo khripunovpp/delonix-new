@@ -556,6 +556,10 @@ select {
   opacity: 1;
 }
 
+.requisites__wrapper {
+  overflow-x: auto;
+}
+
 .requisites__table {
   width: 100%;
   border-collapse: collapse;
@@ -1321,6 +1325,7 @@ select {
   padding-top: 180px;
   margin-top: -140px;
   background-color: #e30b13;
+  overflow: hidden;
 }
 
 .opinionMain__title, .opinionMain__subtitle {

@@ -207,14 +207,11 @@ var popups = function() {
 var fixedMenu = function() {
 
     var headerEl = $('.header'),
-        main = $('.main'),
-        lastScrollTop = 0,
-        scrollDirection = '';
+        main = $('.main');
     _setTopOffset()
     $(window).on('resize', _setTopOffset);
     $(window).on('scroll', function() {
-        _getScrollDirection()
-        scrollDirection == 'down' ? headerEl.addClass('collapsed') : headerEl.removeClass('collapsed')
+       $(this).scrollTop() > 0 ? headerEl.addClass('collapsed') : headerEl.removeClass('collapsed')
         msnr.masonry('layout')
     });
 
@@ -225,16 +222,6 @@ var fixedMenu = function() {
         } else {
             main.removeAttr('style')
         }
-    }
-
-    function _getScrollDirection() {
-        var st = $(this).scrollTop();
-        if (st > lastScrollTop) {
-            scrollDirection = "down"
-        } else {
-            scrollDirection = "up"
-        }
-        lastScrollTop = st;
     }
 }
 
@@ -259,19 +246,12 @@ var reviews = function() {
 }
 
 $(window).on('load', function() {
-    event.preventDefault();
     $('.loader').fadeOut();
 });
 
-
-$(function() {
+$(document).on('ready', function() {
     fixedMenu()
     servicesMenu()
-
-    ////
-    $('#mainstyle').attr('href', $('#mainstyle').attr('href') + "?" + Util.randomInteger(0, 150) + Util.randomInteger(0, 150) + Util.randomInteger(0, 150))
-    ////
-
     search()
     mobileMenu()
     popups()
