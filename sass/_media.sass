@@ -475,7 +475,7 @@
 			display: block
 		.form
 			&__field
-				max-width: 170px
+				max-width: 160px
 			&__submit
 				margin-top: 0
 				display: inline-block
@@ -490,6 +490,7 @@
 		font-weight: 300
 		position: relative
 		z-index: 1
+		overflow: hidden
 		&::before
 			content: ''
 			position: absolute
@@ -581,6 +582,7 @@
 		position: relative
 		padding-top: 300px
 		margin-top: -240px
+		overflow: hidden
 		&::before
 			content: ''
 			position: absolute
@@ -897,6 +899,42 @@
 		&__submit
 			padding: 10px 20px
 			font-size: 17px
+
+	.contacts
+		&__location
+			display: flex
+			box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18)
+		&__map
+			width: 75%
+			height: 440px
+		&__form
+			width: 25%
+			margin-top: 0
+			&::before
+				margin-left: -147px
+
+	.contactsForm
+		box-shadow: none
+		padding: 25px 30px 0
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&__title
+			font-size: 26px
+			text-align: left
+		&__text
+			display: block
+			margin: 0
+		&__form
+			margin-top: auto
+		.form
+			&__submit
+				max-width: none
+				width: calc(100% + 60px)
+				margin-left: -30px
+				margin-top: 30px
+
+
 
 @media only screen and (min-width : 1160px)
 	.slick-prev

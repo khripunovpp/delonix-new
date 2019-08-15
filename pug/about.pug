@@ -27,6 +27,7 @@ html
 				.container
 					section.main__wrapper
 						.main__content
+							a.main__back(href="") < Назад
 							.main__breadcrumbs
 								include _breadcrumbs
 							h1.main__title О нас
@@ -226,7 +227,6 @@ html
 									tbody
 								p.requisites__disclamer Возможна только безналичная оплата
 						aside.main__sidebar
-							a.main__back(href="") < Назад
 							p.main__sideTitle Наши услуги
 							.services
 								include _serviceslist
@@ -253,7 +253,7 @@ html
 										a(href="").tags__item Реклама
 										a(href="").tags__item Лвйфхак
 							include _slideShow
-				include _footer
+			include _footer
 
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js")
 		script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
