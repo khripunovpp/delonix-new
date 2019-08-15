@@ -334,6 +334,13 @@ select
 		list-style-position: inside
 
 .miniGallery
+	visibility: hidden
+	height: 1px
+	overflow: hidden
+	&.slick-initialized
+		height: auto
+		overflow: visible
+		visibility: visible
 	a
 		margin: 0 10px
 	.slick-dots
@@ -372,6 +379,7 @@ select
 		font-size: 16px
 		font-weight: 300
 
+@import "loader"
 
 
 @import "header"

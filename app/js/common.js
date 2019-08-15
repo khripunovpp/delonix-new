@@ -204,16 +204,6 @@ var popups = function() {
         $(event.target).closest('.popup').fadeOut(100)
     });
 }
-
-var setImgRatio = function(el) {
-    $(el).each(function() {
-        var fillClass = ($(this).height() > $(this).width()) ?
-            'fillheight' :
-            'fillwidth';
-        $(this).addClass(fillClass);
-    });
-}
-
 var fixedMenu = function() {
 
     var headerEl = $('.header'),
@@ -268,8 +258,14 @@ var reviews = function() {
     });
 }
 
+$(window).on('load', function() {
+    event.preventDefault();
+    $('.loader').fadeOut();
+});
+
 
 $(function() {
+    fixedMenu()
     servicesMenu()
 
     ////
@@ -279,6 +275,9 @@ $(function() {
     search()
     mobileMenu()
     popups()
+    closedForms()
+    reviews()
+    $("[name=phone]").mask("+7 (999) 999-99-99");
 
     $('.slider').slick({
         dots: true
@@ -338,10 +337,6 @@ $(function() {
         ]
     })
 
-    setImgRatio('.portfolioMain__item img')
-
-    $("[name=phone]").mask("+7 (999) 999-99-99");
-
     $('.miniGallery').lightGallery()
 
     $('.miniGallery').slick({
@@ -381,10 +376,10 @@ $(function() {
         fade: true,
         cssEase: 'linear'
     })
+});
 
-    closedForms()
 
-    fixedMenu()
-
-    reviews()
+$(window).on('load', function() {
+    event.preventDefault();
+    $('.loader').fadeOut();
 });
