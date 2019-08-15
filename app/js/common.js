@@ -249,7 +249,7 @@ $(window).on('load', function() {
     $('.loader').fadeOut();
 });
 
-$(document).on('ready', function() {
+$(function() {
     fixedMenu()
     servicesMenu()
     search()
@@ -257,112 +257,6 @@ $(document).on('ready', function() {
     popups()
     closedForms()
     reviews()
+
     $("[name=phone]").mask("+7 (999) 999-99-99");
-
-    $('.slider').slick({
-        dots: true
-    })
-
-
-    $('.portfolioMain__list').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
-    })
-
-    $('.clientsMain__list').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    })
-
-    $('.opinionMain__list').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    })
-
-
-    $('.miniGallery').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        arrows: false,
-        dots: true,
-        infinite: false,
-        responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    })
-
-    $('.slideShow').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: false
-    })
-
-    $('.hero__slider').slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        fade: true,
-        cssEase: 'linear'
-    })
-
-    
-    $('.portfolioMain__list').lightGallery({ selector: '.portfolioMain__item' })
-    $('.miniGallery').lightGallery()
-
-});
-
-
-$(window).on('load', function() {
-    event.preventDefault();
-    $('.loader').fadeOut();
 });
