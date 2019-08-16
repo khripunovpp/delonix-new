@@ -1113,6 +1113,7 @@ select {
 .servicesMain .form__btn, .servicesMain .form__submit {
   max-width: 320px;
   margin: 5px auto;
+  border-color: #fff;
 }
 
 .servicesMain .services ul {
@@ -3240,6 +3241,9 @@ select {
     width: 100%;
     display: block;
     font-size: 18px;
+  }
+  .main {
+    margin-top: 130px;
   }
   .main__form {
     display: none;

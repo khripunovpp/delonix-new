@@ -139,6 +139,7 @@ html
 		script(src="js/common.js")
 		script.
 			$(function() {
+				$('.miniGallery').lightGallery()
 				$('.miniGallery').slick({
 					slidesToShow: 2,
 					slidesToScroll: 1,
@@ -167,5 +168,4 @@ html
 					autoplaySpeed: 3000,
 					arrows: false
 				})
-				$('.miniGallery').lightGallery()
 			});
