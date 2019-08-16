@@ -8,6 +8,20 @@ aside.popup.popup--callback#callback
 					.popup__form.form.form--popup
 						input.form__field(type="text", placeholder="Имя")
 						input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
+						.form__footer
+							small.form__helper Важно заполнить все поля.
+							button.form__submit.btn Отправить
+
+aside.popup.popup--callback#order
+	table.popup__wrapper
+		tr
+			td.popup__container
+				.popup__inner
+					button.popup__close
+					p.popup__title Заказать звонок
+					.popup__form.form.form--popup
+						input.form__field(type="text", placeholder="Имя")
+						input.form__field(type="text", placeholder="+7 (___) ___-__-__", name="phone")
 						input.form__field(type="text", placeholder="E-mail")
 						textarea.form__field(placeholder="Ваш заказ", rows=8)
 						.form__footer

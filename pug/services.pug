@@ -27,10 +27,10 @@ html
 				.container
 					section.main__wrapper
 						.main__content
-							a.main__back(href="") < Назад
+							a.main__back(href="") Назад
 							.main__breadcrumbs
 								include _breadcrumbs
-							h1.main__title О нас
+							h1.main__title Наши услуги
 							.content
 								.servicesPage
 									.servicesPage__list
@@ -47,6 +47,15 @@ html
 							include _slideShow
 			include _footer
 
+		script(src="js/slick.min.js")
 		script(src="js/jquery.maskedinput.min.js")
 		script(src="js/masonry.pkgd.min.js")
 		script(src="js/common.js")
+		script.
+			$(function() {
+				$('.slideShow').slick({
+					autoplay: true,
+					autoplaySpeed: 3000,
+					arrows: false
+				})
+			});

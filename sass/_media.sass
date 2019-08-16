@@ -339,7 +339,7 @@
 
 	.slider
 		&__item
-			background-size: cover
+			background-size: contain
 			background-position: 50% 50%
 			background-repeat: no-repeat
 			&-inner
@@ -384,7 +384,7 @@
 			font-size: 20px
 		&__box
 			margin: 20px 0 0
-			padding: 15px 20px
+			padding: 25px 30px
 		.services
 			font-size: 17px
 			text-align: left
@@ -425,6 +425,7 @@
 			padding: 0 20px
 		&__item
 			margin: 0 10px
+			min-height: 350px
 
 	.clientsMain
 		&__title
@@ -528,7 +529,7 @@
 				left: 50%
 				transform: translateX(-50%)
 				font-size: 130px
-				opacity: .7
+				opacity: .85
 			&--1
 				&::before
 					content: '\e90d'
@@ -557,8 +558,18 @@
 			.advantagesMain__title
 				margin-bottom: 30px
 			li
-				padding-left: 30px
+				padding-left: 25px
 				margin: 0 0 10px
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					top: 8px
+					left: 0
+					width: 5px
+					height: 5px
+					background-color: #fff
+					border-radius: 50%
 			p
 				margin: 0 0 10px
 			&>*:last-child
@@ -640,7 +651,7 @@
 			text-align: right
 		&__socials
 			display: inline-block
-			font-size: 25px
+			font-size: 22px
 			margin-top: 0
 			margin-right: 10px
 		&__phones
@@ -701,6 +712,10 @@
 			white-space: nowrap
 			&:hover
 				text-decoration: none
+			&::before
+				content: '<'
+				display: inline-block
+				margin-right: 4px
 		&__wrapper
 			display: table
 			table-layout: fixed
@@ -780,7 +795,7 @@
 		thead
 			td, th
 				text-align: left
-				padding-top: 5px
+				padding: 15px 0 0
 				&:first-child
 					padding-left: 20px
 				&:last-child
@@ -789,9 +804,7 @@
 					white-space: nowrap
 		tbody
 			td
-				padding-top: 5px
-				padding-left: 15px
-				padding-right: 15px
+				padding: 0 15px 5px
 				&:first-child
 					padding-left: 20px
 				&:last-child

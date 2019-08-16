@@ -975,7 +975,7 @@ select {
 }
 
 .socials__item + .socials__item {
-  margin-left: .2em;
+  margin-left: .3em;
 }
 
 .socials__item:hover {
@@ -1164,7 +1164,7 @@ select {
   font-size: 0;
   height: auto;
   margin: 0 5px;
-  opacity: .5;
+  opacity: .2;
   -webkit-transition: opacity .1s;
   -o-transition: opacity .1s;
   transition: opacity .1s;
@@ -1259,7 +1259,7 @@ select {
 .clientsMain__item {
   border-radius: 50%;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   margin: 0 5px;
 }
 
@@ -1705,27 +1705,29 @@ select {
   border-collapse: collapse;
 }
 
-.priceList thead {
-  padding: 5px 15px;
-}
-
 .priceList thead td, .priceList thead th {
   font-weight: 100;
   font-size: 14px;
   text-align: left;
+  padding: 8px 15px 0;
 }
 
 .priceList thead td:last-child, .priceList thead th:last-child {
   width: 20%;
 }
 
-.priceList tbody tr {
-  padding: 5px 15px;
+.priceList tbody {
+  padding: 15px 0;
+}
+
+.priceList tbody tr + tr {
+  margin-top: 8px;
 }
 
 .priceList tbody td {
   font-weight: 100;
   font-size: 16px;
+  padding: 0 15px;
 }
 
 .priceList tbody td strong {
@@ -2779,7 +2781,7 @@ select {
     margin-bottom: 0;
   }
   .slider__item {
-    background-size: cover;
+    background-size: contain;
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -2838,7 +2840,7 @@ select {
   }
   .servicesMain__box {
     margin: 20px 0 0;
-    padding: 15px 20px;
+    padding: 25px 30px;
   }
   .servicesMain .services {
     font-size: 17px;
@@ -2892,6 +2894,7 @@ select {
   }
   .portfolioMain__item {
     margin: 0 10px;
+    min-height: 350px;
   }
   .clientsMain__title {
     font-size: 50px;
@@ -3020,7 +3023,7 @@ select {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     font-size: 130px;
-    opacity: .7;
+    opacity: .85;
   }
   .advantagesMain__item--1::before {
     content: '\e90d';
@@ -3054,8 +3057,19 @@ select {
     margin-bottom: 30px;
   }
   .advantagesMain__bottom li {
-    padding-left: 30px;
+    padding-left: 25px;
     margin: 0 0 10px;
+    position: relative;
+  }
+  .advantagesMain__bottom li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
   }
   .advantagesMain__bottom p {
     margin: 0 0 10px;
@@ -3162,7 +3176,7 @@ select {
   }
   .footer__socials {
     display: inline-block;
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 0;
     margin-right: 10px;
   }
@@ -3239,6 +3253,11 @@ select {
   }
   .main__back:hover {
     text-decoration: none;
+  }
+  .main__back::before {
+    content: '<';
+    display: inline-block;
+    margin-right: 4px;
   }
   .main__wrapper {
     display: table;
@@ -3343,7 +3362,7 @@ select {
   }
   .priceList thead td, .priceList thead th {
     text-align: left;
-    padding-top: 5px;
+    padding: 15px 0 0;
   }
   .priceList thead td:first-child, .priceList thead th:first-child {
     padding-left: 20px;
@@ -3354,9 +3373,7 @@ select {
     white-space: nowrap;
   }
   .priceList tbody td {
-    padding-top: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px 5px;
   }
   .priceList tbody td:first-child {
     padding-left: 20px;
