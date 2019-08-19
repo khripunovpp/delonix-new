@@ -57,6 +57,10 @@ input,
 textarea,
 select
 	font-family: $font
+	appearance: none
+	border-radius: 0
+	margin: 0
+	padding: 0
 
 %container
 	width: 100%
@@ -75,6 +79,9 @@ select
 
 .container
 	@extend %container
+
+a[class*=phone]
+	white-space: nowrap
 
 .fileType
 	display: inline-block
@@ -247,7 +254,7 @@ select
 	&::before
 		@extend %icon
 		content: '\e904'
-		font-size: 25px
+		font-size: 19px
 		color: #050505
 		display: inline-block
 	&:hover
@@ -347,25 +354,15 @@ select
 		visibility: visible
 	a
 		margin: 0 10px
-	.slick-dots
-		text-align: center
-		li
-			display: inline-block
-			vertical-align: middle
-			margin: 0 5px
-			button
-				display: inline-block
-				background-color: $color
-				opacity: .4
-				padding: 0
-				width: 15px
-				height: 15px
-				font-size: 0
-				border: none
-				cursor: pointer
-			&.slick-active
-				button
-					opacity: 1
+		display: block
+		&:only-child
+			margin: 0
+	.slick-prev
+		left: 0
+		margin-left: 0
+	.slick-next
+		right: 0
+		margin-right: 0
 
 .requisites
 	&__wrapper

@@ -105,6 +105,12 @@ input,
 textarea,
 select {
   font-family: "Roboto", sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container, .mobileHeader__inner, .mobileNav, .search__inner, .mobileMenu__inner, .slider__item-inner, .hero__container {
@@ -112,6 +118,10 @@ select {
   max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+a[class*=phone] {
+  white-space: nowrap;
 }
 
 .fileType {
@@ -362,7 +372,7 @@ select {
 
 .slick-arrow::before {
   content: '\e904';
-  font-size: 25px;
+  font-size: 19px;
   color: #050505;
   display: inline-block;
 }
@@ -534,32 +544,21 @@ select {
 
 .miniGallery a {
   margin: 0 10px;
+  display: block;
 }
 
-.miniGallery .slick-dots {
-  text-align: center;
+.miniGallery a:only-child {
+  margin: 0;
 }
 
-.miniGallery .slick-dots li {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 5px;
+.miniGallery .slick-prev {
+  left: 0;
+  margin-left: 0;
 }
 
-.miniGallery .slick-dots li button {
-  display: inline-block;
-  background-color: #e30b13;
-  opacity: .4;
-  padding: 0;
-  width: 15px;
-  height: 15px;
-  font-size: 0;
-  border: none;
-  cursor: pointer;
-}
-
-.miniGallery .slick-dots li.slick-active button {
-  opacity: 1;
+.miniGallery .slick-next {
+  right: 0;
+  margin-right: 0;
 }
 
 .requisites__wrapper {
@@ -918,6 +917,10 @@ select {
   display: none;
 }
 
+.socials {
+  line-height: 1;
+}
+
 .socials__item {
   display: inline-block;
   vertical-align: middle;
@@ -1019,6 +1022,7 @@ select {
 .slider__item-content ul {
   text-align: left;
   margin: 20px 0;
+  padding-left: 5px;
 }
 
 .slider__item-content li {
@@ -1175,7 +1179,7 @@ select {
   box-shadow: 0 0 5px rgba(1, 1, 1, 0.25);
   position: relative;
   cursor: pointer;
-  max-height: 300px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -1186,12 +1190,12 @@ select {
   object-position: 50% 50%;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transition: all 1.3s;
+  -o-transition: all 1.3s;
+  transition: all 1.3s;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .portfolioMain__item:hover img {
@@ -1378,11 +1382,13 @@ select {
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
+  opacity: .2;
 }
 
 .opinionMain__item.slick-active {
   -webkit-box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18);
   box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18);
+  opacity: 1;
 }
 
 .opinionMain__info {
@@ -1416,7 +1422,6 @@ select {
 
 .opinionMain .slick-list {
   padding-bottom: 16px;
-  max-width: 220px;
   overflow: visible;
   margin: 0 auto;
 }
@@ -1609,7 +1614,7 @@ select {
 
 .footer__socials {
   font-size: 30px;
-  margin-top: 5px;
+  margin: 10px 0;
 }
 
 .footer__copyright {
@@ -1677,7 +1682,7 @@ select {
 .hero__slide {
   background-size: cover;
   background-position: 50% 50%;
-  height: 450px;
+  height: 430px;
 }
 
 .hero__breadcrumbs {
@@ -1700,6 +1705,8 @@ select {
 .priceList {
   width: -webkit-calc(100% + 30px);
   width: calc(100% + 30px);
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-left: -15px;
   background-color: #e30b13;
   color: #fff;
@@ -1929,12 +1936,12 @@ select {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transition: all 1.3s;
+  -o-transition: all 1.3s;
+  transition: all 1.3s;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .portfolio__item:hover img {
@@ -2033,6 +2040,7 @@ select {
   padding: 0 15px;
   font-size: 17px;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .notFound__submit {
@@ -2253,7 +2261,7 @@ select {
 .searchResults #ya-site-results .b-pager__pages b,
 .searchResults #ya-site-results .b-pager__pages a {
   display: inline-block;
-  padding: 1px 2px;
+  padding: 2px 5px;
   margin: 0 5px 0 0;
   font-weight: 300;
 }
@@ -2305,12 +2313,14 @@ select {
   .priceList {
     display: block;
   }
-  .priceList thead,
   .priceList tbody,
   .priceList tr,
   .priceList td,
   .priceList th {
     display: block;
+  }
+  .priceList thead {
+    display: none;
   }
   .slick-arrow {
     background-color: rgba(255, 255, 255, 0.5);
@@ -2369,6 +2379,9 @@ select {
 @media only screen and (min-width: 992px) {
   .mobile {
     display: none;
+  }
+  .w-page {
+    padding-top: 130px;
   }
   .container {
     max-width: 1140px;
@@ -2514,7 +2527,7 @@ select {
     text-decoration: none;
   }
   .header__socials {
-    font-size: 28px;
+    font-size: 25px;
     white-space: nowrap;
   }
   .header__nav {
@@ -2895,7 +2908,7 @@ select {
   }
   .portfolioMain__item {
     margin: 0 10px;
-    min-height: 350px;
+    height: 350px;
   }
   .clientsMain__title {
     font-size: 50px;
@@ -3095,6 +3108,7 @@ select {
   }
   .opinionMain__item {
     margin: 0 10px;
+    opacity: 1;
   }
   .opinionMain .slick-list {
     overflow: hidden;
@@ -3227,8 +3241,8 @@ select {
   .hero__form {
     display: block;
     position: absolute;
-    bottom: -webkit-calc(100% - 20px);
-    bottom: calc(100% - 20px);
+    bottom: -webkit-calc(100% - 25px);
+    bottom: calc(100% - 25px);
     right: 15px;
     max-width: 285px;
   }
@@ -3240,10 +3254,8 @@ select {
     max-width: none;
     width: 100%;
     display: block;
-    font-size: 18px;
-  }
-  .main {
-    margin-top: 130px;
+    font-size: 20px;
+    padding: 15px 20px;
   }
   .main__form {
     display: none;
@@ -3353,6 +3365,9 @@ select {
   .main--services .main__sidebar {
     padding-top: 65px;
   }
+  .main--404 {
+    margin-top: auto;
+  }
   .slideShow a {
     text-decoration: none;
     background-size: cover;
@@ -3362,7 +3377,7 @@ select {
   }
   .priceList {
     width: 100%;
-    margin: 0;
+    margin-left: 0;
   }
   .priceList thead td, .priceList thead th {
     text-align: left;

@@ -3,12 +3,13 @@
 @media only screen and (max-width : 991px)
 	.priceList
 		display: block
-		thead,
 		tbody,
 		tr,
 		td,
 		th
 			display: block
+		thead
+			display: none
 	.slick-arrow
 		background-color: rgba(255,255,255,.5)
 	.slider	
@@ -55,6 +56,9 @@
 	$container: 1140px
 	.mobile
 		display: none
+
+	.w-page
+		padding-top: 130px
 
 	.container
 		max-width: $container
@@ -153,7 +157,7 @@
 			&:hover
 				text-decoration: none
 		&__socials
-			font-size: 28px
+			font-size: 25px
 			white-space: nowrap
 		&__nav
 			flex-basis: 100%
@@ -425,7 +429,7 @@
 			padding: 0 20px
 		&__item
 			margin: 0 10px
-			min-height: 350px
+			height: 350px
 
 	.clientsMain
 		&__title
@@ -590,6 +594,7 @@
 			font-size: 20px	
 		&__item
 			margin: 0 10px
+			opacity: 1
 		.slick-list
 			overflow: hidden
 			padding-left: 10px
@@ -689,7 +694,7 @@
 		&__form
 			display: block
 			position: absolute
-			bottom: calc(100% - 20px)
+			bottom: calc(100% - 25px)
 			right: 15px
 			max-width: 285px
 			.form
@@ -700,10 +705,10 @@
 					max-width: none
 					width: 100%
 					display: block
-					font-size: 18px
+					font-size: 20px
+					padding: 15px 20px
 
 	.main
-		margin-top: 130px
 		&__form
 			display: none
 		&__back
@@ -781,6 +786,8 @@
 		&--services
 			.main__sidebar
 				padding-top: 65px
+		&--404
+			margin-top: auto
 
 	.slideShow
 		a
@@ -792,7 +799,7 @@
 
 	.priceList
 		width: 100%
-		margin: 0
+		margin-left: 0
 		thead
 			td, th
 				text-align: left

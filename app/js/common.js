@@ -208,21 +208,11 @@ var fixedMenu = function() {
 
     var headerEl = $('.header'),
         main = $('.main');
-    _setTopOffset()
-    $(window).on('resize', _setTopOffset);
+
     $(window).on('scroll', function() {
        $(this).scrollTop() > 0 ? headerEl.addClass('collapsed') : headerEl.removeClass('collapsed')
         msnr.masonry('layout')
     });
-
-
-    function _setTopOffset() {
-        if ($(window).width() > 991) {
-            main.css("margin-top", headerEl.height())
-        } else {
-            main.removeAttr('style')
-        }
-    }
 }
 
 var closedForms = function() {
