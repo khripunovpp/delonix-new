@@ -34,7 +34,7 @@ body
 img
 	max-width: 100%	
 	border: none	
-	outline: none	
+	outline: none
 
 a
 	border: none	
@@ -258,7 +258,9 @@ a[class*=phone]
 		color: #050505
 		display: inline-block
 	&:hover
-		opacity: 1
+		opacity: 1		
+	&.slick-disabled
+		display: none !important
 .slick-next
 	right: 0px
 	&:hover
@@ -343,6 +345,9 @@ a[class*=phone]
 	ul
 		list-style-type: disc
 		list-style-position: inside
+	img
+		margin: 0 auto
+		display: block
 
 .miniGallery
 	visibility: hidden
@@ -353,10 +358,19 @@ a[class*=phone]
 		overflow: visible
 		visibility: visible
 	a
-		margin: 0 10px
+		margin: 0 10px 10px 0
 		display: block
+		height: 350px
 		&:only-child
 			margin: 0
+	img
+		object-position: 50% 50%
+		object-fit: cover
+		height: 100%
+	.slick-list
+		margin-right: -10px
+	.slick-arrow
+		background-color: rgba(255, 255, 255, 0.5)
 	.slick-prev
 		left: 0
 		margin-left: 0
@@ -376,6 +390,8 @@ a[class*=phone]
 			border: 1px solid #bbb
 			padding: 15px
 			font-size: 16px
+			p
+				margin: 0
 	&__disclamer
 		margin: 15px 0 0
 		text-transform: uppercase

@@ -13,25 +13,26 @@
 		margin-top: 15px
 		display: flex
 		flex-direction: column
+	&__tail
+		display: block
+		text-decoration: none
+		&:hover
+			.popularArtciles__caption
+				color: $color
+			.popularArtciles__excerpt
+				color: #000
 	&__caption
 		font-weight: 500
 		font-size: 18px
 		margin: 0 0 5px
 		order: 1
 		line-height: 1.2
-		display: block
-		text-decoration: none
-		&:hover
-			text-decoration: underline
 	&__excerpt
 		font-size: 14px
 		font-weight: 300
 		margin: 0
 		order: 2
-		display: block
-		text-decoration: none
-		&:hover
-			text-decoration: underline
+		color: #c9c9c9
 	&__meta
 		order: 3
 		margin-top: 12px
@@ -41,3 +42,8 @@
 		margin: 8px 0 0
 		span
 			display: block
+	.tags
+		&__item
+			background-color: #c9c9c9
+			&:hover
+				background-color: transparent
