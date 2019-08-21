@@ -1,0 +1,1 @@
+<nav class="socials"><a class="socials__item socials__item--instagram" href="<?php the_field('instagram', 'option'); ?>"></a><a class="socials__item socials__item--whatsapp" href="<?php the_field('whatsapp', 'option'); ?>"></a><a class="socials__item socials__item--viber" href="<?php the_field('viber', 'option'); ?>"></a></nav>
