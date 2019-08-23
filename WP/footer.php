@@ -18,6 +18,18 @@
         </div>
       </footer>
     </div>
+    <script>
+      document.addEventListener('wpcf7mailsent', function(event) {
+        var inputs = event.detail.inputs;
+        for (var i = 0; i < inputs.length; i++) {
+            if ('formslug' == inputs[i].name) {
+              yaCounter<?php echo $all_options['yametrikaid']; ?>.reachGoal(inputs[i].value);
+              ga('send', 'event', inputs[i].value, 'send');
+              break;
+            }
+        }
+      }, false);
+    </script>
     <?php wp_footer(); ?>
   </body>
 </html>

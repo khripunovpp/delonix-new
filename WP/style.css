@@ -229,7 +229,7 @@ a[class*=phone] {
 
 .form__field {
     width: 100%;
-    border: none;
+    border: 1px solid transparent;
     font-size: 14px;
     font-weight: 300;
     color: #000;
@@ -239,6 +239,9 @@ a[class*=phone] {
     appearance: none;
     border-radius: 0;
     margin: 0 0 10px;
+}
+.form__field.wpcf7-not-valid {
+    border-color: #e30b13 !important;
 }
 
 .form__submit,
@@ -262,6 +265,11 @@ a[class*=phone] {
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    margin-top: 5px;
+}
+
+.form__response {
+    width: 100%;
 }
 
 .form--popup {
@@ -278,7 +286,7 @@ a[class*=phone] {
 
 .form--popup .form__field {
     border: 1px solid #d2d2d2;
-    margin-right: 10px;
+    margin: 0;
 }
 
 .form--popup .form__submit {
@@ -326,6 +334,24 @@ a[class*=phone] {
     color: #555;
 }
 
+.form--collapsed .form__field {
+    margin-bottom: 0;
+}
+
+.form--collapsed .wpcf7-form-control-wrap {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form--collapsed .form__response {
+    margin-bottom: 10px;
+}
+
+.form--collapsed div.wpcf7-validation-errors,
+.form--collapsed div.wpcf7-acceptance-missing {
+    border-color: #e30b13 !important;
+}
+
 .form--service::after {
     content: '';
     position: absolute;
@@ -335,6 +361,32 @@ a[class*=phone] {
     width: 100%;
     height: 120%;
     background-color: rgba(241, 241, 241, 0.6);
+}
+
+.form--service .wpcf7-not-valid-tip {
+    display: none !important;
+}
+
+.form--service .form__field {
+    border: 1px solid transparent;
+}
+
+.form--service .wpcf7-not-valid {
+    border-color: #ff0000;
+}
+
+.form--service .form__response {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.form--service div.wpcf7-response-output {
+    margin-top: 0;
+    border-color: #e30b13;
 }
 
 .btn {
@@ -499,6 +551,7 @@ a[class*=phone] {
 .main__form .form__inner {
     background-color: rgba(241, 241, 241, 0.6);
     padding: 15px 15px 0;
+    border: 1px solid transparent;
 }
 
 .main__form .form__submit {
@@ -1210,6 +1263,10 @@ a[class*=phone] {
     border-color: #fff;
 }
 
+.servicesMain .form__response {
+    width: 100%;
+}
+
 .servicesMain .services ul {
     margin: 0 0 4px;
     width: 100%;
@@ -1405,11 +1462,28 @@ a[class*=phone] {
 .orderMain__form,
 .order__form {
     margin-top: 15px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: baseline;
+    align-items: baseline;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
-.orderMain .form__field,
-.order .form__field {
-    margin-right: 20px;
+.wpcf7-form-control-wrap {
+    margin: 0;
+    width: 100%;
+}
+
+.orderMain div.wpcf7-validation-errors,
+.orderMain div.wpcf7-acceptance-missing {
+    border-color: #e30b13 !important;
 }
 
 .orderMain .form__submit,
@@ -1782,6 +1856,12 @@ a[class*=phone] {
     height: 430px;
 }
 
+.hero__slide--default {
+    -webkit-background-size: initial;
+    background-size: initial;
+    background-repeat: no-repeat;
+}
+
 .hero__breadcrumbs {
     margin-bottom: 10px;
     color: #fff;
@@ -1800,18 +1880,18 @@ a[class*=phone] {
 }
 
 .wp-block-table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .wp-block-table tr:first-child {
-  font-weight: 700;
-  font-size: 18px;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .wp-block-table td {
-  border: 1px solid #eee;
-  padding: 8px 20px;
+    border: 1px solid #eee;
+    padding: 8px 20px;
 }
 
 .priceList {
@@ -1833,7 +1913,7 @@ a[class*=phone] {
     text-transform: none !important;
 }
 
-.priceList tr:first-child td:last-child{
+.priceList tr:first-child td:last-child {
     width: 20%;
 }
 
@@ -2252,6 +2332,16 @@ a[class*=phone] {
     display: none;
 }
 
+
+.contactsForm div.wpcf7-validation-errors,
+.contactsForm div.wpcf7-acceptance-missing {
+    border-color: #e30b13 !important;
+}
+
+.contactsForm .form__submit {
+    margin-top: 10px;
+}
+
 .contactsForm__title {
     font-size: 18px;
     font-weight: 300;
@@ -2310,6 +2400,15 @@ a[class*=phone] {
 
 .servicesPage .form__field {
     border: 1px solid #f1f1f1;
+}
+
+.servicesPage .form__submit {
+    margin-top: 10px;
+}
+
+.servicesPage div.wpcf7-validation-errors,
+.servicesPage div.wpcf7-acceptance-missing {
+    border-color: #e30b13 !important;
 }
 
 .searchResults #ya-site-results .b-head {
@@ -2970,9 +3069,23 @@ a[class*=phone] {
         max-width: 200px;
     }
 
-    .popup--review input.form__field {
-        max-width: -webkit-calc(50% - 10px);
-        max-width: calc(50% - 10px);
+    .popup--review .form--popup .wpcf7-form-control-wrap {
+        width: calc(50% - 10px);
+    }
+
+    .popup--review .form--popup .wpcf7-form-control-wrap:nth-child(odd) {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .popup--review .wpcf7-form-control-wrap.msg {
+        max-width: none;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .popup--review .form__field {
+        margin: 0 !important;
     }
 
     .form__field {
@@ -3008,10 +3121,12 @@ a[class*=phone] {
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
+        align-items: baseline;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 
     .form--horizontal .form__field {
@@ -3140,7 +3255,7 @@ a[class*=phone] {
         margin-right: 30px;
     }
 
-    .servicesMain .form__field {
+    .servicesMain .wpcf7-form-control-wrap {
         margin-right: 20px;
         margin-bottom: 0;
         -webkit-box-flex: 1;
@@ -3208,13 +3323,19 @@ a[class*=phone] {
     }
 
     .orderMain .form__submit,
-    .orderMain .form__field {
+    .orderMain .wpcf7-form-control-wrap {
         max-width: 180px;
+        flex: 1 0 180px;
     }
 
     .orderMain .form__submit {
         margin-top: 0;
         display: inline-block;
+    }
+
+    .orderMain .wpcf7-form-control-wrap,
+    .order .wpcf7-form-control-wrap {
+        margin-right: 20px;
     }
 
     .order {
@@ -3246,8 +3367,16 @@ a[class*=phone] {
         display: block;
     }
 
-    .order .form__field {
+    .order .wpcf7-form-control-wrap {
         max-width: 160px;
+    }
+     .order .form__field {
+        margin-right: 0;
+        border: 1px solid transparent;
+    }
+
+    .order .form__field.wpcf7-not-valid {
+       border-color: #e30b13;
     }
 
     .order .form__submit {
@@ -3517,7 +3646,9 @@ a[class*=phone] {
     }
 
     .hero {
-        overflow: visible;
+        overflow: auto;
+        padding-bottom: 30px;
+        margin-bottom: -60px;
     }
 
     .hero__container {
@@ -3534,15 +3665,6 @@ a[class*=phone] {
         font-size: 50px;
     }
 
-    .hero__form {
-        display: block;
-        position: absolute;
-        bottom: -webkit-calc(100% - 45px);
-        bottom: calc(100% - 45px);
-        right: 15px;
-        max-width: 285px;
-    }
-
     .hero__form .form__inner {
         padding: 15px 15px 0;
     }
@@ -3553,6 +3675,7 @@ a[class*=phone] {
         display: block;
         font-size: 20px;
         padding: 15px 20px;
+        white-space: pre-wrap;
     }
 
     .main__form {
@@ -3907,6 +4030,7 @@ a[class*=phone] {
         display: flex;
         -webkit-box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18);
         box-shadow: 10px 10px 8px rgba(1, 1, 1, 0.18);
+        align-items: flex-end;
     }
 
     .contacts__map {
@@ -3989,8 +4113,14 @@ a[class*=phone] {
         max-width: none;
     }
 
-    .servicesPage .form__field {
+    .servicesPage .wpcf7-form-control-wrap {
         margin-right: 20px;
+    }
+
+    .servicesPage .wpcf7-form-control-wrap,
+    .servicesPage .form__submit {
+
+        flex: 1 0 180px;
     }
 
     .servicesPage .form__submit {
@@ -4006,6 +4136,14 @@ a[class*=phone] {
     .searchResults #ya-site-results .b-pager__sorted {
         text-align: left;
     }
+
+    .hero__form {
+        display: block;
+        position: relative;
+        z-index: 1;
+        float: right;
+        max-width: 285px;
+    }
 }
 
 @media only screen and (min-width: 1160px) {
@@ -4017,6 +4155,16 @@ a[class*=phone] {
     .slick-next {
         right: 50%;
         margin-right: -585px;
+    }
+
+    .hero__form {
+        display: block;
+        position: relative;
+        z-index: 1;
+        float: right;
+        right: 50%;
+        margin-right: -555px;
+        max-width: 285px;
     }
 }
 
@@ -4049,4 +4197,49 @@ a[class*=phone] {
         width: auto;
         height: auto;
     }
+}
+
+.ajax-loader {
+    display: none !important;
+}
+
+div.wpcf7-response-output {
+    margin: 15px 0 0;
+}
+
+div.wpcf7-response-output {
+    border-radius: 3px;
+    border-width: 1px !important;
+}
+
+.servicesMain .form .wpcf7-not-valid-tip {
+    margin-top: 2px;
+    font-size: 12px !important;
+}
+
+.servicesMain .form div.wpcf7-response-output {
+    border-color: #fff !important;
+}
+
+.servicesMain .form .wpcf7-not-valid-tip {
+    color: #fff !important;
+}
+
+.form--popup .form__field.wpcf7-not-valid {
+    border-color: #e30b13 !important;
+}
+
+.form--popup .wpcf7-form-control-wrap {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.form--popup div.wpcf7-validation-errors,
+.form--popup div.wpcf7-acceptance-missing {
+    border-color: #e30b13 !important;
+}
+
+.order div.wpcf7-validation-errors,
+.order div.wpcf7-acceptance-missing {
+    border-color: #e30b13 !important;
 }

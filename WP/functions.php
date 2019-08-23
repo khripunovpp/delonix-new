@@ -160,4 +160,16 @@ function add_my_post_types_to_query( $query ) {
     return $query;
 }
 
+add_filter('bcn_breadcrumb_url', 'my_breadcrumb_url_changer', 3, 10);
+function my_breadcrumb_url_changer($url, $type, $id) {
+    $id = intval($id);
+    $link_by_id = array(
+        9 => 120
+    );
+
+    if( in_array('category', $type) && !empty($link_by_id[$id]) ) {
+        $url = get_permalink( $link_by_id[$id] );
+    }
+    return $url;
+}
 ?>

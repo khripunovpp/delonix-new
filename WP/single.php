@@ -20,7 +20,8 @@ $get_theme_file_uri = get_theme_file_uri();
           $('.wp-block-image').children().each(function(index, el) {
             $(this).attr('data-src', $(this).attr('src'))
           });
-          $('.form--service .form__submit, .form--collapsed .form__submit').text($('#buttonsgin').text())
+          $('.form--service, .form--collapsed').find('.form__submit').val($('#buttonsgin').text())
+          $('.form--service, .form--collapsed').find('[name="theme"]').val($('.hero__title').text())
           $('.wp-block-image').lightGallery()
           $('.wp-block-gallery').lightGallery()
           $('.wp-block-gallery').slick({
@@ -61,15 +62,20 @@ $get_theme_file_uri = get_theme_file_uri();
       <article class="main main--service">
         <aside class="main__hero hero">
           <div id="buttonsgin" style="display: none !important"><?php the_field('buttonsign') ?></div>
+          <?php echo do_shortcode('[contact-form-7 id="757" title="Страница услуг (десктоп)" html_class="hero__form form form--service"]'); ?>
           <div class="hero__slider">
             <?php 
             $picsString = trim(get_field('pics'));
             $picsArr = explode("|", $picsString);
             array_pop($picsArr);
 
-            foreach ($picsArr as &$item) : ?> 
+            if($picsArr) :
+              foreach ($picsArr as &$item) : ?> 
                 <div class="hero__slide" style="background-image: url(<?php echo $item ?>)"></div>
-            <?php endforeach; ?>
+              <?php endforeach; ?>
+            <?php else :?>
+              <div class="hero__slide hero__slide--default" style="background-image: url(<?php echo $get_theme_file_uri ?>/img/default.jpg)"></div>
+            <?php endif; ?>
           </div>
           <div class="hero__container">
             <div class="hero__info">
@@ -78,29 +84,12 @@ $get_theme_file_uri = get_theme_file_uri();
               </div>
               <h1 class="hero__title"><?php the_title() ?></h1>
             </div>
-            <form class="hero__form form form--service">
-              <div class="form__inner">
-                <input class="form__field" type="text" placeholder="Имя">
-                <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
-                <input class="form__field" type="text" placeholder="E-mail">
-                <textarea class="form__field" placeholder="Мой заказ" rows="12"></textarea>
-              </div>
-              <button class="form__submit btn btn--invert btn--shadow js-submit">Заказать</button>
-            </form>
           </div>
         </aside>
         <div class="container">
           <section class="main__wrapper">
             <div class="main__content">
-              <form class="main__form form form--collapsed">
-                <div class="form__inner">
-                  <input class="form__field" type="text" placeholder="Имя">
-                  <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
-                  <input class="form__field" type="text" placeholder="E-mail">
-                  <textarea class="form__field" placeholder="Мой заказ" rows="12"></textarea>
-                </div>
-                <button class="form__submit btn btn--invert btn--shadow js-openeform">Заказать</button>
-              </form>
+              <?php echo do_shortcode('[contact-form-7 id="756" title="Страница услуг (мобилка)" html_class="main__form form form--collapsed"]'); ?>
               <div class="content">
                 <?php do_shortcode(the_content()) ?>
               </div>
@@ -108,11 +97,7 @@ $get_theme_file_uri = get_theme_file_uri();
                 <article class="order__inner">
                   <p class="order__title">Оставьте заявку на услугу</p>
                   <p class="order__text">Заполните форму и наш специалист свяжется с Вами </p>
-                  <section class="order__form form">
-                    <input class="form__field" type="text" placeholder="Имя">
-                    <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
-                    <button class="form__submit btn" type="submit">Заказать звонок</button>
-                  </section>
+                  <?php echo do_shortcode('[contact-form-7 id="758" title="Страница услуг (нижняя)" html_class="order__form form"]'); ?>
                 </article>
               </section>
             </div>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Услуги
+Template Name: Карта сайта
 */
 
 get_header();
@@ -16,17 +16,9 @@ $get_theme_file_uri = get_theme_file_uri();
               <div class="main__breadcrumbs">
                 <?php get_template_part( 'breadcrumbs') ?>
               </div>
-              <h1 class="main__title">Наши услуги</h1>
+              <h1 class="main__title"><?php the_title() ?></h1>
               <div class="content">
-                <div class="servicesPage">
-                  <div class="servicesPage__list">
-                    <?php get_template_part( 'servicesmenu') ?>
-                  </div>
-                  <div class="servicesPage__footer">
-                    <div class="servicesPage__text"><?php the_field('text') ?></div>
-                    <?php echo do_shortcode('[contact-form-7 id="754" title="Услуги" html_class="servicesPage__form form form--horizontal"]'); ?>
-                  </div>
-                </div>
+                <div class="sitemap"><?php wp_nav_menu( array('menu' => 'Карта сайта', 'container' => false )); ?></div>
               </div>
             </div>
             <aside class="main__sidebar">

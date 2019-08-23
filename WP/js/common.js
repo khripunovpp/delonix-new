@@ -224,9 +224,10 @@ var fixedMenu = function() {
 
 var closedForms = function() {
     $('.js-openeform').on('click', function(event) {
-        event.preventDefault();
-        $(this).closest('.form').find('.form__inner').slideToggle()
-        $(this).removeClass('js-openeform').addClass('js-submit')
+        if (!$(this).closest('form').hasClass('opened')) {
+            $(this).closest('.form').find('.form__inner').slideToggle().closest('form').toggleClass('opened');
+            return false;
+        }
     });
 }
 
@@ -255,5 +256,13 @@ $(function() {
     closedForms()
     reviews()
 
-    $("[name=phone]").mask("+7 (999) 999-99-99");
+    $("[name*=phone]").mask("+7 (999) 999-99-99");
+
+    $(window).on('wpcf7:invalid', function() {
+        setTimeout(function() {
+            $('.wpcf7-response-output').fadeOut(function() {
+                $(this).html('')
+            });
+        }, 1800)
+    });
 });

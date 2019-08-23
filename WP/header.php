@@ -39,7 +39,7 @@ $get_theme_file_uri = get_theme_file_uri();
               </div>
               <div class="header__bottom">
                 <nav class="header__nav">
-                  <?php wp_nav_menu( array('menu' => 'Главное меню', 'container' => false , 'menu_class' => 'menu__list')); ?>
+                  <?php wp_nav_menu( array('menu' => 'Главное меню', 'container' => false)); ?>
                 </nav>
                 <button class="header__search"></button>
                 <nav class="header__socials">

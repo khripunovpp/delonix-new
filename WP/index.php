@@ -37,12 +37,7 @@ $get_theme_file_uri = get_theme_file_uri();
               <section class="servicesMain__box">
                 <?php get_template_part( 'servicesmenu') ?>
               </section>
-              <section class="servicesMain__form form form--horizontal">
-                <input class="form__field" type="text" placeholder="Имя">
-                <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
-                <button class="form__submit btn btn--link btn--invert" type="submit">Заказать звонок</button><span>или</span>
-                <button class="form__btn btn btn--invert js-openpopup" data-popup-id="order" type="button">Заполнить форму заказа</button>
-              </section>
+              <?php echo do_shortcode('[contact-form-7 id="5" title="Главная (под услугами)" html_class="servicesMain__form form form--horizontal"]'); ?>
             </article>
           </div>
         </section>
@@ -142,11 +137,7 @@ $get_theme_file_uri = get_theme_file_uri();
             <article class="orderMain__inner">
               <h2 class="orderMain__title">Получите бесплатную консультацию специалиста</h2>
               <p class="orderMain__text">Заполните форму и наш специалист свяжется с Вами и ответит на все интересующие вопросы</p>
-              <section class="orderMain__form form">
-                <input class="form__field" type="text" placeholder="Имя">
-                <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
-                <button class="form__submit btn" type="submit">Заказать звонок</button>
-              </section>
+              <?php echo do_shortcode('[contact-form-7 id="753" title="Главная (под клиентами)" html_class="orderMain__form form"]'); ?>
             </article>
           </div>
         </section>

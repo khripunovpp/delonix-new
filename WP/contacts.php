@@ -30,11 +30,7 @@ $get_theme_file_uri = get_theme_file_uri();
                     <div class="contacts__form contactsForm">
                       <h2 class="contactsForm__title">Получите бесплатную консультацию специалиста</h2>
                       <p class="contactsForm__text">Заполните форму и наш специалист свяжется с Вами и ответит на все интересующие вопросы</p>
-                      <section class="contactsForm__form form">
-                        <input class="form__field" type="text" placeholder="Имя">
-                        <input class="form__field" type="text" placeholder="+7 (___) ___-__-__" name="phone">
-                        <button class="form__submit btn" type="submit">Заказать звонок</button>
-                      </section>
+                      <?php echo do_shortcode('[contact-form-7 id="755" title="Контакты" html_class="contactsForm__form form"]'); ?>
                     </div>
                   </div>
                 </div>

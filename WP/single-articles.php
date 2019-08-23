@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Услуга
+Template Name: Статья
 */
 
 get_header();
@@ -20,7 +20,6 @@ $get_theme_file_uri = get_theme_file_uri();
           $('.wp-block-image').children().each(function(index, el) {
             $(this).attr('data-src', $(this).attr('src'))
           });
-          $('.form--service .form__submit, .form--collapsed .form__submit').text($('#buttonsgin').text())
           $('.wp-block-image').lightGallery()
           $('.wp-block-gallery').lightGallery()
           $('.wp-block-gallery').slick({
